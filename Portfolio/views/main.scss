@@ -1,0 +1,62 @@
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+header {
+    color: white;
+}
+
+body {
+    background-image: url('../img/professional-portfolio-background.jpg') cover center;
+}
+
+.brand-subtext {
+    color:gainsboro;
+    font-size: .75em;
+}
+
+
+.nav-link {
+    color: white;
+}
+
+// .nav > li > a:hover {
+//     color: white;
+// }
+
+.card-img-top {
+    height: 15em;
+}
+
+.card {
+    margin-top: 2em;
+}
+
+.contact {
+    width: 100%;
+}
+
+.socials {
+    position: absolute;
+    color: white;
+    margin-right: 1em;
+    margin-top: 1em;
+    height: 3em;   
+}
+
+.socials:hover {
+    color:white;
+}
+
+footer {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color:#708090;
+} 
+
