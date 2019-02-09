@@ -50,22 +50,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 ////////MYSQL POST FUNCTION//////////
 app.post('/contact', (req, res) => {
     
-    insertInfo.insertInfo()
-        .then(results => res.send(results))
-        .catch(e => console.log(e));
-        console.log(`${name}`)
+    // insertInfo.insertInfo()
+    //     .then(results => res.send(results))
+    //     .catch(e => console.log(e));
+    //     console.log(`${name}`)
 
-    //////////POST RESPONSE//////////
-    // res.send('Thanks for the email ' + req.body.name + '. I will get back to you in a timely manner.');
-    // //////////STORE NAME IN JSON FILE//////////
-    // fs.appendFileSync('userData.json', JSON.stringify(req.body.name), err => {
+    ////////POST RESPONSE//////////
+    res.send('Thanks for the email ' + req.body.name + '. I will get back to you in a timely manner.');
+    //////////STORE NAME IN JSON FILE//////////
+    fs.appendFileSync('userData.json', JSON.stringify(req.body.name), err => {
 
-    //     if (err)
-    //         console.log("You've made an error")
-    // })
+        if (err)
+            console.log("You've made an error")
+    })
 
 
-    // 
+    
 
 
     // //////////STORE EMAIL IN JSON FILE//////////
