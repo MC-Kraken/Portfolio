@@ -5,12 +5,17 @@
 
 
 header {
-    color: white;
+    color: black;
+    background-color: transparent;
 }
 
 body {
-    background-image: url('../img/professional-portfolio-background.jpg') cover center;
+    background-image: url(bg-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+
 
 .brand-subtext {
     color:gainsboro;
@@ -22,9 +27,6 @@ body {
     color: white;
 }
 
-// .nav > li > a:hover {
-//     color: white;
-// }
 
 .card-img-top {
     height: 15em;

@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
   "main": "script.js",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -21,5 +20,14 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MC-Kraken/Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MC-Kraken/Portfolio/issues"
+  },
+  "homepage": "https://github.com/MC-Kraken/Portfolio#readme",
+  "description": ""
 }
