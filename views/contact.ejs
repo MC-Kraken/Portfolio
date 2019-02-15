@@ -15,20 +15,42 @@
 
 <body>
     <div class="container-fluid">
-        <% include nav %>
+            <nav class="navbar navbar-expand-md bg-transparent">
+                    <a href="/home" class="navbar-brand text-white">Blake McCracken</a><span class="brand-subtext mr-auto d-none d-md-block pt-1">Coder.
+                        Builder. Designer</span>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navBarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navBarMenu">
+                        <ul class="navbar-nav nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" onClick="activeNav()" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
         <!-- Header -->
         <header class="bg-trasparent">
             <div class="row text-center">
                 <div class="col">
-                    <h1>Contact</h1>
+                    <h1>Reach Out</h1>
                 </div>
             </div>
         </header>
             <!-- Form -->
-            <form class="mt-5" action="/contact" method="POST">
+            <form action="/contact" method="POST">
                 <div class="row mb-2 justify-content-center">
                     <div class="col-6">
-                        <input class="form-input bg-dark text-white justify-content-center contact" type="text" name="name"
+                        <input class="form-input bg-dark justify-content-center contact" type="text" name="name"
                             placeholder="Your Name" required>
                     </div>
                 </div>
@@ -51,9 +73,14 @@
                 </div>
             </form>
         </div>
-
+    <!-- Container End -->
     </div>
-    <% include footer %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

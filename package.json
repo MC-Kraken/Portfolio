@@ -4,14 +4,16 @@
   "main": "script.js",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.2.1",
     "bootstrap-sass": "^3.4.0",
+    "create-react-app": "^2.1.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mysql": "^2.16.0",
+    "react": "^16.8.1",
     "request": "^2.88.0",
     "ruby": "^0.6.1",
     "sass": "^1.17.0",
-    "bootstrap": "^4.2.1",
     "webpack": "^4.29.2"
   },
   "devDependencies": {},

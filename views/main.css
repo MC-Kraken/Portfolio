@@ -10385,24 +10385,47 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+body {
+  height: 100vh;
+}
+
 header {
+  margin-top: 10%;
   color: black;
   background-color: transparent;
 }
 
-body {
-  background-image: url(bg-img.jpg);
-  background-repeat: no-repeat;
+.container-fluid {
+  background-image: url("bg-img.jpeg");
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-brand:hover {
+  color: black;
 }
 
 .brand-subtext {
-  color: gainsboro;
+  color: black;
   font-size: .75em;
+  font-weight: 500;
 }
 
 .nav-link {
-  color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  color: black;
+}
+
+.nav-link:hover {
+  font-size: 1.25em;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  color: black;
 }
 
 .card-img-top {
@@ -10417,25 +10440,26 @@ body {
   width: 100%;
 }
 
-.socials {
-  position: absolute;
-  color: white;
-  margin-right: 1em;
-  margin-top: 1em;
-  height: 3em;
+.active {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 1.25em;
 }
 
-.socials:hover {
-  color: white;
-}
-
-footer {
-  color: white;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  height: 10%;
-  width: 100%;
-  background-color: #708090;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 3px solid #0059ff;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
+  box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 /*# sourceMappingURL=main.css.map */

@@ -16,7 +16,29 @@
 <body>
     <!--Nav-->
     <div class="container-fluid">
-        <% include nav %>
+            <nav class="navbar navbar-expand-md bg-transparent">
+                    <a href="/home" class="navbar-brand">Blake McCracken</a><span class="brand-subtext mr-auto d-none d-lg-block pt-1">Coder.
+                        Builder. Designer</span>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navBarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navBarMenu">
+                        <ul class="navbar-nav nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact" href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>  
         <!--Header-->
         <header class="bg-transparent">
             <div class="row text-center">

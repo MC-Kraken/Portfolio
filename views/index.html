@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
     crossorigin="anonymous">
   <link rel="stylesheet" href="main.css" type="text/css">
-  
+
   <title>Blake McCracken</title>
 </head>
 
@@ -20,28 +20,30 @@
 
   <!--Nav-->
   <div class="container-fluid">
-
-    <nav class="navbar navbar-expand-md navbar-light">
-      <a href="/home" class="navbar-brand">Blake McCracken</a><span class="brand-subtext mr-auto">Coder. Cool Guy</span>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navBarMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navBarMenu">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <div class="img-wrap">
+      <nav class="navbar navbar-expand-md">
+        <a href="/home" class="navbar-brand">Blake McCracken</a><span class="brand-subtext mr-auto d-none d-lg-block pt-1">Coder.
+          Builder. Designer</span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navBarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBarMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </div>
     </nav>
 
 
@@ -53,6 +55,9 @@
         </div>
       </div>
     </header>
+    <main>
+      <section></section>
+    </main>
 
 
 
@@ -62,13 +67,16 @@
     <!-- Container End -->
   </div>
 
-  <footer class="page-footer">
-    <div class="container">
-      <!-- Copyright -->
-      <div class="copyright footer-copyright text-center py-3">© 2019 Copyright:
-        <p>Blake McCracken</p>
-      </div>
-  </footer>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active');
+    });
+</script> 
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
