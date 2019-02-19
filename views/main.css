@@ -10404,6 +10404,7 @@ header {
 }
 
 .navbar-brand {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
@@ -10412,6 +10413,7 @@ header {
 }
 
 .brand-subtext {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
   font-size: .75em;
   font-weight: 500;
@@ -10423,9 +10425,16 @@ header {
 }
 
 .nav-link:hover {
-  font-size: 1.25em;
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
+}
+
+.active {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 1.25em;
 }
 
 .card-img-top {
@@ -10438,14 +10447,6 @@ header {
 
 .contact {
   width: 100%;
-}
-
-.active {
-  color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-size: 1.25em;
 }
 
 input:-webkit-autofill,
@@ -10461,5 +10462,26 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.portrait {
+  background-image: url("portrait.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.about {
+  height: 32vh;
+  margin-top: 20vh;
+}
+
+.about-text {
+  font-size: 3vw;
+}
+
+@media screen and (min-width: 900px) {
+  .about-text {
+    font-size: 2vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */

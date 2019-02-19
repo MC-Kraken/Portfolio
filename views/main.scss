@@ -1,5 +1,5 @@
 
-
+//modified bootstrap variables go here//
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -22,7 +22,14 @@ header {
     
 }
 
+//////////NAVBAR//////////
+
 .navbar-brand {
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
     color: black;
 }
 
@@ -31,6 +38,11 @@ header {
 }
 
 .brand-subtext {
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
     color: black;
     font-size: .75em;
     font-weight: 500;
@@ -47,26 +59,12 @@ header {
 }
 
 .nav-link:hover {
-    font-size: 1.25em;
     text-shadow:
 		-1px -1px 0 white,
 		1px -1px 0 white,
 		-1px 1px 0 white,
 		1px 1px 0 white;
     color: black;
-}
-
-
-.card-img-top {
-    height: 15em;
-}
-
-.card {
-    margin-top: 2em;
-}
-
-.contact {
-    width: 100%;
 }
 
 .active {
@@ -81,7 +79,22 @@ header {
     font-size: 1.25em;
 }
 
- 
+//////////PROJECTS//////////
+
+.card-img-top {
+    height: 15em;
+}
+
+.card {
+    margin-top: 2em;
+}
+
+//////////CONTACT//////////
+
+.contact {
+    width: 100%;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus
@@ -97,6 +110,31 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+//////////ABOUT//////////
+
+.portrait {
+    background-image: url('portrait.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.about {
+    height: 32vh;
+    margin-top: 20vh;
+}
+
+.about-text {
+    font-size: 3vw;
+}
+
+@media screen and (min-width: 900px) {
+    .about-text {
+      font-size: 2vw;
+    }
+  }
+
+
 
 
 

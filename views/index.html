@@ -23,8 +23,9 @@
     <div class="img-wrap">
       <nav class="navbar navbar-expand-md">
         <a href="/home" class="navbar-brand">Blake McCracken</a><span class="brand-subtext mr-auto d-none d-lg-block pt-1">Coder.
-          Builder. Designer</span>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navBarMenu">
+          Builder. Designer.</span>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navBarMenu"
+          aria-controls="navBarMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navBarMenu">
@@ -66,17 +67,6 @@
 
     <!-- Container End -->
   </div>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-        var url = window.location;
-        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
-        $('ul.nav a').filter(function() {
-             return this.href == url;
-        }).parent().addClass('active');
-    });
-</script> 
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
