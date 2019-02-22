@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
-const fs = require('fs');
 const mysql = require('mysql');
 const port = '3000';
 
@@ -48,10 +47,6 @@ app.get('/projects', function (req, res) {
 
 app.get('/contact', function (req, res) {
     res.render(pathJoin + '/contact');
-    
-    let cActive = document.getElementById('contact')
-    
-    cActive.classList.add('active')
 });
 
 //////////CUSTOM 404 PAGE//////////

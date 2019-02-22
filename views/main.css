@@ -10389,10 +10389,15 @@ body {
   height: 100vh;
 }
 
+.reach-out {
+  margin-top: 10%;
+  color: black;
+}
+
 header {
   margin-top: 10%;
   color: black;
-  background-color: transparent;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .container-fluid {
@@ -10438,11 +10443,14 @@ header {
 }
 
 .card-img-top {
-  height: 15em;
+  width: 10em;
+  height: 10em;
 }
 
 .card {
   margin-top: 2em;
+  width: 10em;
+  height: 5em;
 }
 
 .contact {
