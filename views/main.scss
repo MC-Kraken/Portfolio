@@ -7,13 +7,8 @@ body {
     height: 100vh;
 }
 
-.reach-out {
-    margin-top: 10%;
-    color: black;
-}
-
 header {
-    margin-top: 10%;
+    margin-top: 5vh;
     color: black;
     text-shadow:
 		-1px -1px 0 white,
@@ -22,6 +17,24 @@ header {
 		1px 1px 0 white;
 }
 
+@media screen and (width: 1024px), (height: 1366px) {
+    header {
+        margin-top: 15vh;
+    }
+}
+
+// @media screen and (min-width: 1000px) {
+//     header {
+//         margin-top: 25%;
+//     }
+// }
+
+// @media screen and (min-width: 1200px) {
+//     header {
+//         margin-top: 2%;
+//     }
+// }
+
 .container-fluid {
     background-image: url('bg-img.jpeg');
     background-position: center;
@@ -29,6 +42,12 @@ header {
     background-repeat: no-repeat;
     height: 100vh;
     
+}
+
+//////////LANDING PAGE//////////
+
+#landing {
+    margin-top: 25vh;
 }
 
 //////////NAVBAR//////////
@@ -116,7 +135,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 3px solid rgb(0, 89, 255);
+//   border: 3px solid rgb(0, 89, 255);
   -webkit-text-fill-color: white;
   -webkit-box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
   box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
@@ -144,7 +163,7 @@ select:-webkit-autofill:focus {
     .about-text {
       font-size: 2vw;
     }
-  }
+}
 
 
 
