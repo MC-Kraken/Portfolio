@@ -148,6 +148,8 @@ select:-webkit-autofill:focus {
     background-image: url('portrait.jpeg');
     background-size: contain;
     background-repeat: no-repeat;
+    box-shadow: 5px 10px black;
+    border: 5px solid black;
 }
 
 .about {
