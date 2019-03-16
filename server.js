@@ -79,7 +79,7 @@ app.post('/contact', (req, res) => {
 
 
 //////////SPECIFY PORT TO LISTEN TO/////////
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
     console.log('Server listening on port ' + port);
 });
 
