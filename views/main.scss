@@ -1,4 +1,6 @@
-
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+$carousel-indicator-active-bg: black;
 //modified bootstrap variables go here//
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -42,6 +44,24 @@ header {
     background-repeat: no-repeat;
     height: 100vh;
     
+}
+
+.socials {
+    color: black;
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
+.socials:hover {
+    color: black;
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
 }
 
 //////////LANDING PAGE//////////
@@ -95,7 +115,7 @@ header {
     color: black;
 }
 
-.active {
+.current {
     color:black;
     text-shadow:
 		-1px -1px 0 white,
@@ -109,16 +129,11 @@ header {
 
 //////////PROJECTS//////////
 
-.card-img-top {
-    width: 10em;
-    height: 10em;
+.card {
+    background-color: transparent;
+    border-color: transparent;
 }
 
-.card {
-    margin-top: 2em;
-    width: 10em;
-    height: 5em;
-}
 
 //////////CONTACT//////////
 
