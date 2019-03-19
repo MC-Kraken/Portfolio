@@ -10566,9 +10566,9 @@ body {
 }
 
 header {
-  margin-top: 10vh;
+  margin-top: 5vh;
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 @media screen and (max-width: 750px) {
@@ -10587,12 +10587,12 @@ header {
 
 .socials {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .socials:hover {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 #landing {
@@ -10600,7 +10600,7 @@ header {
 }
 
 .navbar-brand {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
@@ -10609,28 +10609,41 @@ header {
 }
 
 .brand-subtext {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
   font-size: .75em;
   font-weight: 500;
 }
 
 .nav-link {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
 .nav-link:hover {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
 .current {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 1.25em;
+}
+
+.appImg {
+  height: 40vh;
+  width: 20vh;
+}
+
+.card-title {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+.card-text {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .card {
@@ -10641,13 +10654,19 @@ header {
   height: 16em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 768px) {
+  .card {
+    width: 36em;
+    height: 36em;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .carousel {
     margin-top: 0;
   }
-  .card {
-    width: 20em;
-    height: 15em;
+  .card-body {
+    height: 5em;
   }
 }
 
@@ -10657,7 +10676,7 @@ header {
   }
   .card {
     width: 18em;
-    height: 12em;
+    height: 13.75em;
   }
   h1 {
     margin-bottom: 0;
@@ -10668,6 +10687,11 @@ header {
   width: 100%;
 }
 
+textarea {
+  resize: vertical;
+  max-height: 30em;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus textarea:-webkit-autofill,
@@ -10676,8 +10700,8 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
-  box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
+  -webkit-box-shadow: 0 0 0px 1000px #343a40 inset;
+  box-shadow: 0 0 0px 1000px #343a40 inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }

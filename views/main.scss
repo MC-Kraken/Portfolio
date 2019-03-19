@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    margin-top: 10vh;
+    margin-top: 5vh;
     color: black;
     text-shadow:
 		-1px -1px 0 white,
@@ -129,6 +129,27 @@ header {
 
 //////////PROJECTS//////////
 
+.appImg {
+    height: 40vh;
+    width: 20vh;
+}
+
+.card-title {
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
+.card-text {
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+}
+
 .card {
     margin-top: 3em;
     background-color: transparent;
@@ -137,13 +158,23 @@ header {
     height: 16em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 768px) {
+    .card {
+        width: 36em;
+        height: 36em;
+    }
+}
+
+@media screen and (max-width: 767px) {
     .carousel {
         margin-top: 0;
     }
-    .card {
-        width: 20em;
-        height: 15em;
+    // .card {
+    //     width: 20em;
+    //     height: 15em;
+    // }
+    .card-body {
+        height: 5em;
     }
 }
 
@@ -153,7 +184,7 @@ header {
     }
     .card {
         width: 18em;
-        height: 12em;
+        height: 13.75em;
         
     }
     h1 {
@@ -167,6 +198,11 @@ header {
     width: 100%;
 }
 
+textarea {
+    resize: vertical; 
+    max-height: 30em;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus
@@ -178,8 +214,8 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
 //   border: 3px solid rgb(0, 89, 255);
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
-  box-shadow: 0 0 0px 1000px rgba(227, 230, 220, 0.055) inset;
+  -webkit-box-shadow: 0 0 0px 1000px #343a40 inset;
+  box-shadow: 0 0 0px 1000px #343a40 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
