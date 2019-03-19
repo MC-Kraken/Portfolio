@@ -10568,7 +10568,7 @@ body {
 header {
   margin-top: 10vh;
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 @media screen and (max-width: 750px) {
@@ -10587,12 +10587,12 @@ header {
 
 .socials {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .socials:hover {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 #landing {
@@ -10600,7 +10600,7 @@ header {
 }
 
 .navbar-brand {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
@@ -10609,33 +10609,59 @@ header {
 }
 
 .brand-subtext {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
   font-size: .75em;
   font-weight: 500;
 }
 
 .nav-link {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
 .nav-link:hover {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
 .current {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 1.25em;
 }
 
 .card {
+  margin-top: 3em;
   background-color: transparent;
   border-color: transparent;
+  width: 24em;
+  height: 16em;
+}
+
+@media screen and (max-width: 500px) {
+  .carousel {
+    margin-top: 0;
+  }
+  .card {
+    width: 20em;
+    height: 15em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .carousel {
+    margin-top: 0;
+  }
+  .card {
+    width: 18em;
+    height: 12em;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
 }
 
 .contact {

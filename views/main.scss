@@ -130,10 +130,36 @@ header {
 //////////PROJECTS//////////
 
 .card {
+    margin-top: 3em;
     background-color: transparent;
     border-color: transparent;
+    width: 24em;
+    height: 16em;
 }
 
+@media screen and (max-width: 500px) {
+    .carousel {
+        margin-top: 0;
+    }
+    .card {
+        width: 20em;
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .carousel {
+        margin-top: 0;
+    }
+    .card {
+        width: 18em;
+        height: 12em;
+        
+    }
+    h1 {
+        margin-bottom: 0;
+    }
+}
 
 //////////CONTACT//////////
 
