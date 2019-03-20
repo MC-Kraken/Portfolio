@@ -10568,7 +10568,7 @@ body {
 header {
   margin-top: 5vh;
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 @media screen and (max-width: 750px) {
@@ -10587,12 +10587,12 @@ header {
 
 .socials {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .socials:hover {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 #landing {
@@ -10600,7 +10600,7 @@ header {
 }
 
 .navbar-brand {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
@@ -10609,25 +10609,25 @@ header {
 }
 
 .brand-subtext {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
   font-size: .75em;
   font-weight: 500;
 }
 
 .nav-link {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
 .nav-link:hover {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
 }
 
 .current {
   color: black;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 1.25em;
@@ -10639,11 +10639,11 @@ header {
 }
 
 .card-title {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .card-text {
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .card {
@@ -10651,32 +10651,102 @@ header {
   background-color: transparent;
   border-color: transparent;
   width: 24em;
-  height: 16em;
+  height: 40em;
 }
 
-@media screen and (min-width: 768px) {
+.carousel-item {
+  height: 33em;
+}
+
+@media screen and (width: 1024px) {
   .card {
     width: 36em;
     height: 36em;
   }
+  .carousel-item {
+    height: 48em;
+  }
+  .carousel {
+    margin-top: 5em;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width: 768px) {
+  .card {
+    width: 36em;
+    height: 36em;
+  }
+  .carousel-item {
+    height: 40em;
+  }
+}
+
+@media screen and (width: 360px) {
   .carousel {
+    margin-top: 1em;
+  }
+  .carousel-item {
+    height: 28.25em;
+  }
+  .card {
+    width: 20em;
+    height: 18.75em;
+    margin-top: .5em;
+  }
+  .appImg {
+    height: 30vh;
+    width: 15vh;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (width: 375px) {
+  .carousel {
+    margin-top: 1em;
+  }
+  .carousel-item {
+    height: 36em;
+  }
+  .card {
+    width: 18em;
+    height: 18.75em;
     margin-top: 0;
   }
-  .card-body {
-    height: 5em;
+  .appImg {
+    height: 20vh;
+    width: 10vh;
+  }
+  h1 {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
   .carousel {
-    margin-top: 0;
+    margin-top: 1em;
+  }
+  .carousel-item {
+    height: 18.5em;
+  }
+  .card-body {
+    padding-top: 1rem;
+  }
+  .card-text {
+    margin-bottom: .5rem;
   }
   .card {
     width: 18em;
-    height: 13.75em;
+    height: 18.75em;
+    margin-top: 0;
+  }
+  .card-title {
+    margin-bottom: 0;
+  }
+  .appImg {
+    height: 18vh;
+    width: 10vh;
   }
   h1 {
     margin-bottom: 0;
