@@ -62,18 +62,6 @@ app.post('/contact', (req, res) => {
 
     ////////POST RESPONSE//////////
     res.send('Thanks for the email ' + req.body.name + '. I will get back to you in a timely manner.');
-
-    //////////SEND TO DATABASE//////////
-    let query = `INSERT INTO contact_info(name, email, message) VALUES(?, ?, ?)`;
-
-    let data = [`${req.body.name}`, `${req.body.email}`, `${req.body.message}`]
-
-    pool.query(query, data, (err, results, fields) => {
-        if (!err)
-            res.send(results);
-        else
-            console.log(err);
-    });
 });
 
 
