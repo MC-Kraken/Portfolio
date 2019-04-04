@@ -2,23 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const nodemailer = require('nodemailer');
 const port = '3000';
 
+
+require('dotenv').config();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
-
-//////////CONNECTION//////////
-const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: 'localhost',
-    user: 'root',
-    password: 'BeGre@t2019',
-    database: 'portfolio_contact'
-});
-
 
 //////////SETTING VIEW ENGINE TO EJS//////////
 app.set('view engine', 'ejs');
@@ -58,11 +50,32 @@ app.get('*', function (req, res) {
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //////////POST RESPONSE FOR CONTACT PAGE//////////
-app.post('/contact', (req, res) => {
-
-    ////////POST RESPONSE//////////
-    res.send('Thanks for the email ' + req.body.name + '. I will get back to you in a timely manner.');
-});
+app.post('/contact', function (req, res, next) {
+    let mailOpts, smtpTrans;
+    smtpTrans = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS
+      }
+    })
+    next()
+    mailOpts = {
+      from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+      to: process.env.GMAIL_USER,
+      subject: 'New message from contact form at blakemccracken.com',
+      text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+    };
+    
+    smtpTrans.sendMail(mailOpts, function (error, res) {
+      if(error) {
+        console.log("Something went wrong seding contact form data")
+      } 
+    });
+    res.render(pathJoin + '/home');
+  });
 
 
 
