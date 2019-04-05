@@ -74,7 +74,22 @@ app.post('/contact', function (req, res, next) {
         console.log("Something went wrong seding contact form data")
       } 
     });
-    res.render(pathJoin + '/home');
+  // var mailgun = require("mailgun-js");
+  // var api_key = '5004ff14d044c66532c275e6213698ec-2416cf28-05f6220d';
+  // var DOMAIN = 'sandbox71b159fd02f548cb8a7c3d4f69192b9a.mailgun.org';
+  // var mailgun = require('mailgun-js')({apiKey: api_key, domain: DOMAIN});
+
+  // var data = {
+  //   from: 'Mailgun Sandbox <postmaster@sandbox71b159fd02f548cb8a7c3d4f69192b9a.mailgun.org>',
+  //   to: 'Blake <blakeamccracken@gmail.com>',
+  //   subject: 'Hello Blake',
+  //   text: 'Congratulations Blake, you just sent an email with Mailgun!  You are truly awesome!'
+  // };
+
+  // mailgun.messages().send(data, function (error, body) {
+  //   console.log(body);
+  // });
+  res.render(pathJoin + '/post');
   });
 
 
