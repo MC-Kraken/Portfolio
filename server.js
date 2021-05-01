@@ -33,8 +33,8 @@ app.get('/about', function (req, res) {
     res.render(pathJoin + '/about');
 });
 
-app.get('/projects', function (req, res) {
-    res.render(pathJoin + '/projects');
+app.get('/resume', function (req, res) {
+    res.render(pathJoin + '/resume');
 });
 
 app.get('/contact', function (req, res) {
