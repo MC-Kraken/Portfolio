@@ -25,10 +25,6 @@ app.get('/index', function (req, res) {
     res.render(pathJoin + '/index');
 });
 
-app.get('/home', function (req, res) {
-    res.render(pathJoin + '/home');
-});
-
 app.get('/about', function (req, res) {
     res.render(pathJoin + '/about');
 });
