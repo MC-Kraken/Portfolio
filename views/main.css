@@ -9781,6 +9781,7 @@ select:-webkit-autofill:focus {
 .about-text {
   margin-top: 1rem;
   font-size: 2vw;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 @media screen and (min-width: 900px) {
