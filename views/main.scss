@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  margin-top: 15vh;
+  margin-top: 5vh;
   color: black;
   text-shadow: -1px -1px 0 white,
   1px -1px 0 white,
@@ -134,10 +134,6 @@ header {
   width: 100%;
 }
 
-header[id="reachOut"] {
-  margin-top: 5vh;
-}
-
 textarea {
   resize: vertical;
   max-height: 30em;
@@ -146,17 +142,17 @@ textarea {
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
+input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   //   border: 3px solid rgb(0, 89, 255);
   -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px #343a40 inset;
-  box-shadow: 0 0 0px 1000px #343a40 inset;
+  -webkit-box-shadow: 0 0 0 1000px #343a40 inset;
+  box-shadow: 0 0 0 1000px #343a40 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
