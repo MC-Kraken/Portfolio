@@ -9708,6 +9708,11 @@ header {
   font-weight: 500;
 }
 
+@media screen and (max-width: 450px) {
+  .brand-subtext {
+    display: none;
+  }
+}
 .nav-link {
   text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
   color: black;
@@ -9727,8 +9732,8 @@ header {
 }
 
 .resume {
-  margin-top: 5rem;
-  height: 100px;
+  margin-top: 1rem;
+  height: 200px;
   justify-content: center;
 }
 .resume .thumbnail {
@@ -9788,6 +9793,29 @@ select:-webkit-autofill:focus {
   .about-text {
     font-size: 1.25vw;
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  }
+}
+@media screen and (max-height: 450px) and (orientation: landscape) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+
+  div.row.text-center {
+    max-width: 100%;
+  }
+
+  div.fixed-bottom {
+    max-width: 100%;
+  }
+
+  .container-fluid {
+    height: 100vw;
+  }
+}
+@media (width: 1024px) and (height: 1366px) {
+  h1 {
+    margin-top: 10vh;
   }
 }
 
