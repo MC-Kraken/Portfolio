@@ -12,9 +12,9 @@
     "request": "^2.88.0",
     "ruby": "^0.6.1",
     "sass": "^1.17.0",
+    "vercel": "^28.4.8",
     "webpack": "^4.29.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass views/main.scss views/main.css --watch",
