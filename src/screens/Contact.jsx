@@ -1,5 +1,6 @@
 import { constants } from "../constants.js";
 import { Navigation } from "../components/Navigation.jsx";
+import { Footer } from "../components/Footer.jsx";
 
 export const Contact = () => {
     return (
@@ -43,6 +44,7 @@ export const Contact = () => {
                     </div>
                 </div>
             </form>
+            <Footer />
         </>
     )
 }
