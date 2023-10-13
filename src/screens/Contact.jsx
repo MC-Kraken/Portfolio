@@ -3,6 +3,26 @@ import { Navigation } from "../components/Navigation.jsx";
 import { Footer } from "../components/Footer.jsx";
 
 export const Contact = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const data = new FormData(e.target);
+        const url = "https://script.google.com/macros/s/AKfycbynTNktvUqKoebazlhjir8mVl5LM8tyGBAQxv-4b8MJJyVmTOzlHsLFwyQNgYFLFxta/exec";
+
+        fetch(url, {
+            method: 'POST',
+            body: data,
+        })
+            .then(() => {
+                window.location.href = "/thank-you";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again later.");
+            });
+    };
+
+
     return (
         <>
             <Navigation current={constants.screens.contact} />
@@ -14,9 +34,7 @@ export const Contact = () => {
                 </div>
             </header>
 
-            <form
-                action="https://script.google.com/macros/s/AKfycbwZyCje3vm9rSC_gkOHhiSZZK7csDg1ZDupApsEIrxbFNyUtRK0JpQ6rzg2q5LXQTmn/exec"
-                method="POST">
+            <form id="contactForm" onSubmit={handleSubmit}>
                 <div className="d-flex mb-2 mt-3 justify-content-center">
                     <div className="col-6 pl-0 pr-0">
                         <input className="form-input bg-dark text-white justify-content-center contact" type="text"
@@ -39,9 +57,8 @@ export const Contact = () => {
                 </div>
                 <div className="text-center">
                     <div className="col">
-                        {/*TODO: make this input type submit when ready*/}
-                        <a href="/contactpost">
-                            <input className="btn btn-dark" type="button" value="Send Message" />
+                        <a href="/thank-you">
+                            <input className="btn btn-dark" type="submit" value="Send Message" />
                         </a>
                     </div>
                 </div>

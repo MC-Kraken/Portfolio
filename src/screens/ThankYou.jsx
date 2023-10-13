@@ -1,4 +1,4 @@
-export const ContactPost = () => {
+export const ThankYou = () => {
     return (
         <>
             <header className="bg-transparent" id="post">
