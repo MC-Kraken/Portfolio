@@ -16,8 +16,8 @@ export const About = () => {
             </Container>
             <Container>
                 <Row className="about justify-content-center">
-                    <Col xs={{ span: 3, order: 1 }} sm={{ span: 3, order: 1 }} md={{ span: 2, order: 1 }} lg={2} className="portrait ml-5"></Col>
-                    <Col xs={{ span: 12, order: 2 }} sm={{ span: 12, order: 2 }} md={{ span: 12, order: 2 }} lg={9} className="about-text">
+                    <Col xs={{ span: 3, order: 1 }} sm={{ span: 3, order: 1 }} md={2} lg={2} className="portrait ml-5"></Col>
+                    <Col xs={{ span: 12, order: 2 }} sm={{ span: 12, order: 2 }} md={10} lg={9} className="about-text">
                         Hey, thanks for checking out my site. I&apos;m Blake, a Software Engineer based in Seattle, WA,
                         with over five years of experience in the tech industry.
                         <br />
