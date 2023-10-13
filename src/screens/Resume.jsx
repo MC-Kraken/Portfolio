@@ -15,22 +15,20 @@ export const Resume = () => {
                 </Row>
             </Container>
             <Container>
-                    <Row className="resume">
-                        <Col className="thumbnail"></Col>
-                    </Row>
-                <Row>
-                    <Col className="text-center">
-                        <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-                            <Button variant="dark" className="mt-3">
-                                Download
-                            </Button>
-                        </a>
-                    </Col>
+                <Row className="resume">
+                    <Col className="thumbnail"></Col>
                 </Row>
                 <Row>
                     <Col className="text-center">
                         <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-                            <Button variant="dark" className="mt-3">
+                            <Button variant="dark" className="mt-3 resume-button">
+                                Download
+                            </Button>
+                        </a>
+                    </Col>
+                    <Col className="text-center">
+                        <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <Button variant="dark" className="mt-3 resume-button">
                                 View
                             </Button>
                         </a>
