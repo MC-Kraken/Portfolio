@@ -14,7 +14,9 @@ export const Contact = () => {
                 </div>
             </header>
 
-            <form action="/contact" method="POST">
+            <form
+                action="https://script.google.com/macros/s/AKfycbwZyCje3vm9rSC_gkOHhiSZZK7csDg1ZDupApsEIrxbFNyUtRK0JpQ6rzg2q5LXQTmn/exec"
+                method="POST">
                 <div className="d-flex mb-2 mt-3 justify-content-center">
                     <div className="col-6 pl-0 pr-0">
                         <input className="form-input bg-dark text-white justify-content-center contact" type="text"
@@ -39,7 +41,7 @@ export const Contact = () => {
                     <div className="col">
                         {/*TODO: make this input type submit when ready*/}
                         <a href="/contactpost">
-                            <input className="btn btn-dark" type="button" value="Send Message" />
+                            <input className="btn btn-dark" type="submit" value="Send Message" />
                         </a>
                     </div>
                 </div>
