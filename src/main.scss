@@ -78,6 +78,23 @@ body {
   padding-right: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 45px;
+    left: 20px
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .navbar-collapse {
+    position: absolute;
+    right: 13px;
+    top: 7px
+  }
+}
+
+
 .navbar-toggler {
   margin-left: auto;
 }
