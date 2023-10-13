@@ -5,7 +5,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 export const Navigation = ({ current }) => {
     return (
         <Navbar expand="md" variant="light" bg="transparent">
-            <Navbar.Brand href="/about">Blake McCracken</Navbar.Brand>
+            <Navbar.Brand href="/">Blake McCracken</Navbar.Brand>
             <span className="brand-subtext mr-auto d-lg-block pt-1">React / TypeScript / .NET / C#</span>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
