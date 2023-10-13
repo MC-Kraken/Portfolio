@@ -1,34 +1,34 @@
 import { constants } from "../constants.js";
 import PropTypes from "prop-types";
+import { Navbar, Nav } from 'react-bootstrap';
 
-export const Navigation = ({current}) => {
+export const Navigation = ({ current }) => {
     return (
-        <nav className="navbar navbar-expand-md bg-transparent">
-            <a href="/about" className="navbar-brand">Blake McCracken</a><span
-            className="brand-subtext mr-auto d-lg-block pt-1">React / TypeScript / C#</span>
-            <button className="navbar-toggler navbar-light" type="button" data-toggle="collapse"
-                    data-target="#navBarMenu"
-                    aria-controls="navBarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navBarMenu">
-                <ul className="navbar-nav nav ml-auto">
-                    <li className="nav-item">
-                        <a className={current === constants.screens.about ? "nav-link current" : "nav-link"}
-                           href="/about">About</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={current === constants.screens.resume ? "nav-link current" : "nav-link"}
-                           href="/resume">Resume</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={current === constants.screens.contact ? "nav-link current" : "nav-link"}
-                           id="contact" href="/contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    )
+        <Navbar expand="md" variant="light" bg="transparent">
+            <Navbar.Brand href="/about">Blake McCracken</Navbar.Brand>
+            <span className="brand-subtext mr-auto d-lg-block pt-1">React / TypeScript / .NET / C#</span>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ml-auto">
+                    <Nav.Item>
+                        <Nav.Link href="/about" className={current === constants.screens.about ? "current" : ""}>
+                            About
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/resume" className={current === constants.screens.resume ? "current" : ""}>
+                            Resume
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/contact" className={current === constants.screens.contact ? "current" : ""}>
+                            Contact
+                        </Nav.Link>
+                    </Nav.Item>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    );
 }
 
 Navigation.propTypes = {

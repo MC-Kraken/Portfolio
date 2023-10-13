@@ -27,7 +27,7 @@ body {
 header {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 12vh;
   color: black;
   text-shadow: -1px -1px 0 white,
   1px -1px 0 white,
@@ -77,6 +77,19 @@ header {
 }
 
 //////////NAVBAR//////////
+
+.navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-collapse.collapse {
+  justify-content: flex-end;
+}
 
 .navbar-brand {
   text-shadow: -1px -1px 0 white,
