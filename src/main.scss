@@ -144,7 +144,7 @@ body {
 //////////RESUME//////////
 .resume {
   margin-top: 1rem;
-  height: 200px;
+  height: 300px;
   display: flex;
   justify-content: center;
 
@@ -201,11 +201,11 @@ select:-webkit-autofill:focus {
 //////////ABOUT//////////
 
 .portrait {
+  height: 225px;
   margin-top: 1rem;
   background-image: url('assets/portrait.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
-  // box-shadow: 5px 10px black;
 }
 
 .about {
@@ -214,17 +214,27 @@ select:-webkit-autofill:focus {
 }
 
 .about-text {
-  margin-top: 1rem;
-  font-size: 1.25vw;
+  padding: 0 40px;
+  font-size: 2vw;
   text-shadow: -1px -1px 0 white,
   1px -1px 0 white,
   -1px 1px 0 white,
   1px 1px 0 white;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1280px) {
   .about-text {
-    font-size: 1vw;
+    font-size: 1.25vw;
+    text-shadow: -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+  .about-text {
+    font-size: 1.5vw;
     text-shadow: -1px -1px 0 white,
     1px -1px 0 white,
     -1px 1px 0 white,

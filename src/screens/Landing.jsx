@@ -1,31 +1,21 @@
 import { Navigation } from "../components/Navigation.jsx";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import LandingTypewriterEffect from "../components/LandingTypewriterEffect.jsx";
+import { Footer } from "../components/Footer.jsx";
 
 export const Landing = () => {
     return (
         <>
             <Navigation />
-            <header className="bg-transparent" id="landing">
-                <div className="row m-0 text-center">
-                    <div className="col">
-                        <h1>Hi, I&apos;m Blake McCracken</h1>
-                    </div>
-                </div>
-                <div className="row m-0 text-center">
-                    <div className="col">
-                        <h3>I&apos;m a software developer in Seattle, WA</h3>
-                    </div>
-                </div>
-                <div className="row m-0 text-center">
-                    <div className="col">
-                        <a href="/about">
-                            <button className="btn btn-dark mt-3">Enter</button>
-                        </a>
-                    </div>
-                </div>
-            </header>
-            <main>
-                <section></section>
-            </main>
+            <Container fluid className="bg-transparent" id="landing">
+                <LandingTypewriterEffect />
+                <Row className="m-0 text-center">
+                    <Col>
+                        <Button variant="dark" className="mt-3" href="/about">Enter</Button>
+                    </Col>
+                </Row>
+            </Container>
+            <Footer />
         </>
     )
 }
