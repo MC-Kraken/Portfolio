@@ -1,6 +1,7 @@
 import { constants } from "../constants.js";
 import { Navigation } from "../components/Navigation.jsx";
 import { Footer } from "../components/Footer.jsx";
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 export const Contact = () => {
     const handleSubmit = (e) => {
@@ -26,43 +27,61 @@ export const Contact = () => {
     return (
         <>
             <Navigation current={constants.screens.contact} />
-            <header className="bg-trasparent">
-                <div className="row text-center">
-                    <div className="col">
-                        <h1>Reach Out</h1>
-                    </div>
-                </div>
-            </header>
 
-            <form id="contactForm" onSubmit={handleSubmit}>
-                <div className="d-flex mb-2 mt-3 justify-content-center">
-                    <div className="col-6 pl-0 pr-0">
-                        <input className="form-input bg-dark text-white justify-content-center contact" type="text"
-                               name="name"
-                               placeholder="Your Name" required />
-                    </div>
-                </div>
-                <div className="d-flex mb-2 justify-content-center">
-                    <div className="col-6 pl-0 pr-0">
-                        <input
-                            className="form-input bg-dark text-white placeholder-white justify-content-center contact"
-                            type="email" name="email" placeholder="Your Email" required />
-                    </div>
-                </div>
-                <div className="d-flex mb-2 justify-content-center">
-                    <div className="col-6 pl-0 pr-0">
-                    <textarea className="contact bg-dark text-white" name="message" id="" cols="30" rows="10"
-                              placeholder="Your Message" required></textarea>
-                    </div>
-                </div>
-                <div className="text-center">
-                    <div className="col">
-                        <a href="/thank-you">
-                            <input className="btn btn-dark" type="submit" value="Send Message" />
-                        </a>
-                    </div>
-                </div>
-            </form>
+            <Container fluid className="bg-transparent header">
+                <Row className="text-center">
+                    <Col>
+                        <h1>Reach Out</h1>
+                    </Col>
+                </Row>
+            </Container>
+
+            <Form id="contactForm" onSubmit={handleSubmit}>
+                <Row className="justify-content-center mb-2 mt-3">
+                    <Col xs={6}>
+                        <Form.Control
+                            className="bg-dark text-white contact"
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            required />
+                    </Col>
+                </Row>
+
+                <Row className="justify-content-center mb-2">
+                    <Col xs={6}>
+                        <Form.Control
+                            className="bg-dark text-white contact"
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required />
+                    </Col>
+                </Row>
+
+                <Row className="justify-content-center mb-2">
+                    <Col xs={6}>
+                        <Form.Control
+                            as="textarea"
+                            className="contact bg-dark text-white"
+                            name="message"
+                            cols="30"
+                            rows="10"
+                            placeholder="Your Message"
+                            required />
+                    </Col>
+                </Row>
+
+                <Row className="text-center">
+                    <Col>
+
+                        <Button type="submit" className="btn-dark">
+                            Send Message
+                        </Button>
+                    </Col>
+                </Row>
+            </Form>
+
             <Footer />
         </>
     )

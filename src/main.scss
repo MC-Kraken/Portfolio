@@ -9,22 +9,17 @@ body {
 }
 
 #root {
+  max-height: 100vh;
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
 }
 
 .row {
   max-width: 100vw;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-header {
+.header {
   display: flex;
   justify-content: center;
   margin-top: 12vh;
@@ -165,6 +160,14 @@ header {
 
 .contact {
   width: 100%;
+}
+
+#contactForm div {
+  margin: 0;
+}
+
+.bg-dark.text-white::placeholder {
+  color: white;
 }
 
 textarea {
