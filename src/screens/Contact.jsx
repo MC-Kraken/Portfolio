@@ -41,7 +41,7 @@ export const Contact = () => {
                     <div className="col">
                         {/*TODO: make this input type submit when ready*/}
                         <a href="/contactpost">
-                            <input className="btn btn-dark" type="submit" value="Send Message" />
+                            <input className="btn btn-dark" type="button" value="Send Message" />
                         </a>
                     </div>
                 </div>
