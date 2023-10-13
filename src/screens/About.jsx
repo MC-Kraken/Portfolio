@@ -16,7 +16,7 @@ export const About = () => {
                 <div className="row about justify-content-center">
                     <div className="col-2 portrait ml-5"></div>
                     <div className="col-6 about-text">
-                        Hey there! 👋 I&apos;m a Senior Software Engineer based in beautiful Seattle, WA, with over five years of experience in the tech industry.
+                        Hey, thanks for checking out my site. I&apos;m Blake, a Software Engineer based in Seattle, WA, with over five years of experience in the tech industry.
                         <br/>
                         <br/>
                         My journey began at KEYSYS, where I dabbled in everything from crafting microservice-based CRMs to modernizing AngularJS code into sleek React solutions. After a rewarding two years there, I joined Pyx Health, where I honed my skills in frontend development and played a pivotal role in fortifying the test infrastructure.
