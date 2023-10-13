@@ -20,7 +20,6 @@ export const Resume = () => {
                     </Row>
                 <Row>
                     <Col className="text-center">
-                        {/* TODO: Add view button that links to the .png */}
                         <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
                             <Button variant="dark" className="mt-3">
                                 Download
