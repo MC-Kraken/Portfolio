@@ -5,8 +5,23 @@ import { Contact } from '../screens/Contact';
 import { Landing } from "../screens/Landing.jsx";
 import '../main.scss';
 import { ThankYou } from "../screens/ThankYou.jsx";
+import { useEffect } from "react";
 
 const AppRouter = () => {
+    useEffect(() => {
+        const lockOrientation = async () => {
+            if (screen.orientation) {
+                try {
+                    await screen.orientation.lock('portrait');
+                } catch (error) {
+                    console.error("Screen orientation lock error: ", error);
+                }
+            }
+        };
+
+        lockOrientation().then();
+    }, []);
+
     return (
         <Router>
             <Routes className={"container"}>

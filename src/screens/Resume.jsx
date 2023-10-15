@@ -19,14 +19,14 @@ export const Resume = () => {
                     <Col className="thumbnail"></Col>
                 </Row>
                 <Row>
-                    <Col className="text-center">
-                        <a href="/resume.pdf" download="BlakeMcCrackenResume.pdf" rel="noopener noreferrer">
+                    <Col className="text-center d-flex justify-content-end">
+                        <a href="/BlakeMcCrackenResume.pdf" download rel="noopener noreferrer">
                             <Button variant="dark" className="mt-3 resume-button">
                                 Download
                             </Button>
                         </a>
                     </Col>
-                    <Col className="text-center">
+                    <Col className="text-center d-flex justify-content-start">
                         <a href="/resume.png" target="_blank" rel="noopener noreferrer">
                             <Button variant="dark" className="mt-3 resume-button">
                                 View

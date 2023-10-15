@@ -22,18 +22,8 @@ export const About = () => {
                         with over five years of experience in the tech industry.
                         <br />
                         <br />
-                        My journey began at KEYSYS, where I dabbled in everything from crafting microservice-based CRMs
-                        to modernizing AngularJS code into sleek React components. After a rewarding two years there, I
-                        joined Pyx Health, where I honed my skills in frontend development and played a pivotal role in
-                        fortifying the test infrastructure.
-                        <br />
-                        <br />
-                        In 2022, I joined Integrate as a Senior Software Engineer, where I&apos;ve been cooking up new
-                        auth services, diving deep into Kafka, leading the charge on a .NET 6 API, and more.
-                        <br />
-                        <br />
-                        Outside of coding, I have a passion for weight lifting and enjoy exploring the breathtaking
-                        outdoors of Seattle. If you want to chat about tech, gaming, Pull Requests or Personal Records,
+                        Outside of coding, I have passions for gaming, urbanism, weight lifting, and exploring the breathtaking
+                        outdoors of Seattle. If you want to chat about tech, trains, gaming, Pull Requests or Personal Records,
                         feel free to reach out anytime!
                     </Col>
                 </Row>
