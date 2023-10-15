@@ -15,6 +15,12 @@ const AppRouter = () => {
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/resume.pdf" component={() => {
+                    window.location.href = '../assets/resume.pdf';
+                }} />
+                <Route path="/resume.png" component={() => {
+                    window.location.href = '../assets/resume.png';
+                }} />
             </Routes>
         </Router>
     );
