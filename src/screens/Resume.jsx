@@ -20,14 +20,14 @@ export const Resume = () => {
                 </Row>
                 <Row>
                     <Col className="text-center">
-                        <a href="/public/resume.pdf" download="BlakeMcCrackenResume.pdf" rel="noopener noreferrer">
+                        <a href="/resume.pdf" download="BlakeMcCrackenResume.pdf" rel="noopener noreferrer">
                             <Button variant="dark" className="mt-3 resume-button">
                                 Download
                             </Button>
                         </a>
                     </Col>
                     <Col className="text-center">
-                        <a href="/public/resume.png" target="_blank" rel="noopener noreferrer">
+                        <a href="/resume.png" target="_blank" rel="noopener noreferrer">
                             <Button variant="dark" className="mt-3 resume-button">
                                 View
                             </Button>
