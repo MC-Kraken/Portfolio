@@ -20,7 +20,7 @@ export const Resume = () => {
                 </Row>
                 <Row>
                     <Col className="text-center">
-                        <a href="src/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="src/assets/resume.pdf" download rel="noopener noreferrer">
                             <Button variant="dark" className="mt-3 resume-button">
                                 Download
                             </Button>
