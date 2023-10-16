@@ -23,7 +23,7 @@ export const About = () => {
                         <br />
                         <br />
                         Outside of coding, I have passions for gaming, urbanism, weight lifting, and exploring the breathtaking
-                        outdoors of Seattle. If you want to chat about tech, trains, gaming, Pull Requests or Personal Records,
+                        outdoors of Seattle. If you want to chat about tech, trains, gaming, or PRs (Pull Requests or Personal Records),
                         feel free to reach out anytime!
                     </Col>
                 </Row>
