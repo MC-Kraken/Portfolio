@@ -38,7 +38,7 @@ export const Contact = () => {
 
             <Form id="contactForm" onSubmit={handleSubmit}>
                 <Row className="justify-content-center mb-2 mt-3">
-                    <Col xs={6}>
+                    <Col xs={10} md={6}>
                         <Form.Control
                             className="bg-dark text-white contact"
                             type="text"
@@ -49,7 +49,7 @@ export const Contact = () => {
                 </Row>
 
                 <Row className="justify-content-center mb-2">
-                    <Col xs={6}>
+                    <Col xs={10} md={6}>
                         <Form.Control
                             className="bg-dark text-white contact"
                             type="email"
@@ -60,7 +60,7 @@ export const Contact = () => {
                 </Row>
 
                 <Row className="justify-content-center mb-2">
-                    <Col xs={6}>
+                    <Col xs={10} md={6}>
                         <Form.Control
                             as="textarea"
                             className="contact bg-dark text-white"

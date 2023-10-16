@@ -78,7 +78,7 @@ body {
   padding-right: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar-collapse {
     position: absolute;
     top: 45px;
@@ -226,6 +226,12 @@ select:-webkit-autofill:focus {
   background-image: url('assets/portrait.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  .portrait {
+    height: 160px;
+  }
 }
 
 .about {
