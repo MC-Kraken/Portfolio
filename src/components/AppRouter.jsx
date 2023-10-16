@@ -19,7 +19,7 @@ const AppRouter = () => {
             }
         };
 
-        lockOrientation().then();
+        lockOrientation().then(() => "Orientation locked").catch(error => "Screen orientation lock execution error: " + error);
     }, []);
 
     return (
