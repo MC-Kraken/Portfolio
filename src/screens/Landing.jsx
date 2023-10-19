@@ -11,7 +11,7 @@ export const Landing = () => {
                 <LandingTypewriterEffect />
                 <Row className="m-0 text-center">
                     <Col>
-                        <Button variant="dark" className="mt-3" href="/about">Enter</Button>
+                        <Button variant="dark" className="mt-3" href="/about">Learn More</Button>
                     </Col>
                 </Row>
             </Container>

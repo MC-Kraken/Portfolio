@@ -17,7 +17,7 @@ export const ThankYou = () => {
             <div className="text-center">
                 <div className="col">
                     <a href="/about">
-                        <button className="btn btn-dark mt-3">Continue</button>
+                        <button className="btn btn-dark mt-3">Head Back</button>
                     </a>
                 </div>
             </div>

@@ -16,7 +16,7 @@ function TypewriterEffect() {
                 <Typist className="typewriter-text">
                     <span className="h1">Hi, I&apos;m Blake McCracken</span>
                 </Typist>
-                <br/>
+                <br />
                 {firstLineTyped && (
                     <Typist className="typewriter-text">
                         <span className="h3">I&apos;m a software engineer in Seattle, WA</span>

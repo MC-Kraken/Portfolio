@@ -21,6 +21,7 @@ body {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 12vh;
   color: black;
@@ -78,6 +79,14 @@ body {
   padding-right: 10px;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 @media screen and (max-width: 767px) {
   .navbar-collapse {
     position: absolute;
@@ -93,7 +102,6 @@ body {
     top: 7px
   }
 }
-
 
 .navbar-toggler {
   margin-left: auto;
@@ -165,7 +173,7 @@ body {
   justify-content: center;
 
   .thumbnail {
-    background-image: url("../public/resume.png");
+    background-image: url("/resume.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -268,23 +276,10 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media screen and (max-height: 450px) and (orientation: landscape) {
-  body {
-    height: 100vw;
-    transform: rotate(90deg);
-  }
-
-  div.row.text-center {
-    max-width: 100%;
-  }
-
-  div.fixed-bottom {
-    max-width: 100%;
-  }
-
-  .container-fluid {
-    height: 100vw;
-  }
+//////////PROJECTS//////////
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
 }
 
 // iPad Pro
