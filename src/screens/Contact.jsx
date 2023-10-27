@@ -1,6 +1,6 @@
 import { constants } from "../constants.js";
 import { Navigation } from "../components/Navigation.jsx";
-import { Footer } from "../components/Footer.jsx";
+import Footer from "../components/Footer.jsx";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 export const Contact = () => {

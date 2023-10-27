@@ -1,6 +1,6 @@
 import { Navigation } from "../components/Navigation.jsx";
 import { constants } from "../constants.js";
-import { Footer } from "../components/Footer.jsx";
+import Footer from "../components/Footer.jsx";
 import { Col, Container, Row } from "react-bootstrap";
 
 export const About = () => {
