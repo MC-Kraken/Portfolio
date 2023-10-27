@@ -19,7 +19,7 @@ export const About = () => {
                     <Col xs={{ span: 3, order: 1 }} sm={{ span: 3, order: 1 }} md={2} lg={2} className="portrait ml-5"></Col>
                     <Col xs={{ span: 12, order: 2 }} sm={{ span: 12, order: 2 }} md={10} lg={9} className="about-text">
                         Hey, thanks for checking out my site. I&apos;m Blake, a Software Engineer based in Seattle, WA,
-                        with over five years of experience in the tech industry.
+                        with five years of experience in the tech industry.
                         <br />
                         <br />
                         Outside of coding, I have passions for gaming, urbanism, weight lifting, and exploring the breathtaking
