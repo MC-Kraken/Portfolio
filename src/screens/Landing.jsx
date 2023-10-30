@@ -16,7 +16,7 @@ export const Landing = () => {
 
         setTimeout(() => {
             setSecondLineTyped(true);
-        }, 5350)
+        }, 4350)
     }, []);
 
     return (

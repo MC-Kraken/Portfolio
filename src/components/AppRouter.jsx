@@ -3,9 +3,11 @@ import { About } from '../screens/About';
 import { Resume } from '../screens/Resume';
 import { Contact } from '../screens/Contact';
 import { Landing } from "../screens/Landing.jsx";
-import '../main.scss';
 import { ThankYou } from "../screens/ThankYou.jsx";
 import { useEffect } from "react";
+import { Projects } from "../screens/Projects.jsx";
+import '../main.scss';
+import Activity from "../screens/Activity.jsx";
 
 const AppRouter = () => {
     useEffect(() => {
@@ -14,7 +16,7 @@ const AppRouter = () => {
                 try {
                     await screen.orientation.lock('portrait');
                 } catch (error) {
-                    console.error("Screen orientation lock error: ", error);
+                    console.log(error);
                 }
             }
         };
@@ -30,6 +32,8 @@ const AppRouter = () => {
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/activity" element={<Activity />} />
             </Routes>
         </Router>
     );

@@ -11,7 +11,7 @@ export default function TypewriterEffect({firstLineTyped}) {
                 </Typist>
                 <br />
                 {firstLineTyped && (
-                    <Typist typingDelay={50} finishDelay={2000} className="typewriter-text">
+                    <Typist typingDelay={50} finishDelay={1000} className="typewriter-text">
                         <span className="h3">I&apos;m a software engineer in Seattle, WA</span>
                     </Typist>
                 )}

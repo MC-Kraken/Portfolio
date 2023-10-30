@@ -2,7 +2,7 @@ import { constants } from "../constants.js";
 import PropTypes from "prop-types";
 import { Navbar, Nav } from 'react-bootstrap';
 
-export const Navigation = ({ current }) => {
+export const Navigation = ({current}) => {
     return (
         <Navbar expand="md" variant="light" bg="transparent">
             <Navbar.Brand href="/">Blake McCracken</Navbar.Brand>
@@ -13,6 +13,16 @@ export const Navigation = ({ current }) => {
                     <Nav.Item>
                         <Nav.Link href="/about" className={current === constants.screens.about ? "current" : ""}>
                             About
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/activity" className={current === constants.screens.activity ? "current" : ""}>
+                            Activity
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/projects" className={current === constants.screens.projects ? "current" : ""}>
+                            Projects
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
