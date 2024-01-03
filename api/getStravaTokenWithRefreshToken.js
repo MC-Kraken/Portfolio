@@ -43,6 +43,7 @@ async function handler(request, response) {
     })
         .then(res => res.json())
         .then(data => {
+            console.log(data);
             secretsManager.updateSecret({
                 SecretId: secretName,
                 SecretString: JSON.stringify({refreshToken: data.refresh_token}),

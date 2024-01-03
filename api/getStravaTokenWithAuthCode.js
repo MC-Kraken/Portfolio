@@ -39,7 +39,10 @@ async function handler(request, response) {
                 }
             });
 
-            return response.status(200).json({accessToken: data.access_token})
+            return response.status(200).json({
+                accessToken: data.access_token,
+                expiresAt: data.expires_at
+            })
         })
         .catch(error => {
             console.error("Error:", error);
