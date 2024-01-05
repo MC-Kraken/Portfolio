@@ -151,7 +151,7 @@ export default function Activity() {
                 {/*        </Col>*/}
                 {/*    </Row>*/}
                 {/*}*/}
-                {detailedActivities.length && detailedActivities.map((activity, i) => {
+                {detailedActivities.length > 0 && detailedActivities.map((activity, i) => {
                     return (
                         <div key={`activity-${i}`} className={"card-container"}>
                             <Card style={{width: '18rem'}}>
