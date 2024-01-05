@@ -8,7 +8,7 @@ export const WeddingDemoCard = () => {
                 <Card.Body className={"bg-dark text-white"}>
                     <Card.Title>Wedding Website</Card.Title>
                     <Card.Text>
-                        <a href={"https://mock-wedding-website.vercel.app/"} target={"_blank"} rel="noreferrer">See the demo</a>
+                        <a href={"https://mock-wedding-website.vercel.app/"} target={"_blank"} rel="noreferrer">See a demo</a>
                     </Card.Text>
                 </Card.Body>
             </Card>
