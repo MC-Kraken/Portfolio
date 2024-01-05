@@ -16,7 +16,6 @@ async function handler(request, response) {
     const secretsManager = new AWS.SecretsManager();
     const secretName = "STRAVA_REFRESH_TOKEN";
 
-    // Retrieve the secret value
     secretsManager.getSecretValue({SecretId: secretName}, (err, data) => {
         if (err) {
             console.error('Error retrieving secret:', err);
