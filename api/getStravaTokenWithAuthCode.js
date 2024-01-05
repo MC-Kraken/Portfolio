@@ -30,7 +30,7 @@ async function handler(request, response) {
         .then(data => {
             secretsManager.updateSecret({
                 SecretId: secretName,
-                SecretString: JSON.stringify({refreshToken: data.refresh_token}),
+                SecretString: JSON.stringify({value: data.refresh_token}),
             }, (err, data) => {
                 if (err) {
                     console.error("Error updating secret:", err);

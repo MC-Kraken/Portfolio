@@ -23,7 +23,7 @@ async function handler(request, response) {
         } else {
             // Parse and use the secret value
             const secret = JSON.parse(data.SecretString);
-            refreshToken = secret.STRAVA_REFRESH_TOKEN;
+            refreshToken = secret.value;
         }
     });
 
@@ -43,10 +43,9 @@ async function handler(request, response) {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             secretsManager.updateSecret({
                 SecretId: secretName,
-                SecretString: JSON.stringify({refreshToken: data.refresh_token}),
+                SecretString: JSON.stringify({value: data.refresh_token}),
             }, (err, data) => {
                 if (err) {
                     console.error('Error updating secret:', err);

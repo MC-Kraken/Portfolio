@@ -24,6 +24,7 @@ export default function Activity() {
             // testing with activity:read_all scope. Remove the _all when done testing private activities
             // update redirect_uri with prod domain when deployed
             window.location.href = `https://www.strava.com/oauth/authorize?client_id=${import.meta.env.VITE_STRAVA_CLIENT_ID}&redirect_uri=http://localhost:5173/activity&response_type=code&scope=read,activity:read_all`
+            return;
         }
 
         if (authCode) {
@@ -44,8 +45,25 @@ export default function Activity() {
                 .catch(error => {
                     console.error('Error:', error);
                 });
+            return;
         }
-    }, [authCode, accessToken]);
+
+        if (expiresAt < currentTime) {
+            fetch('http://localhost:3000/api/getStravaTokenWithRefreshToken', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    localStorage.setItem("strava_access_token", data.access_token);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    }, [authCode, accessToken, expiresAt, currentTime]);
 
     useEffect(() => {
         if (accessToken) {
@@ -55,8 +73,14 @@ export default function Activity() {
                     "Authorization": `Bearer ${accessToken}`
                 }
             })
-                .then(res => res.json())
+                .then(res => {
+                    if (res.status === 200) {
+                        return res.json();
+                    }
+                    throw new Error("There was an error fetching athlete");
+                })
                 .then(data => setAthlete(data))
+                .catch(e => console.error(e))
         }
     }, [accessToken])
 
@@ -68,8 +92,16 @@ export default function Activity() {
                     "Authorization": `Bearer ${accessToken}`
                 }
             })
-                .then(res => res.json())
-                .then(data => setActivities(data?.map(a => a.id)))
+                .then(res => {
+                    if (res.status === 200) {
+                        return res.json();
+                    }
+                    throw new Error("There was an error fetching activities");
+                })
+                .then(data => {
+                    setActivities(data.map(a => a.id))
+                })
+                .catch(e => console.error(e));
         }
     }, [accessToken])
 
@@ -89,24 +121,7 @@ export default function Activity() {
                     });
             })
         }
-    }, [activities])
-
-    if (expiresAt < currentTime) {
-        // get new token with refresh token, use serverless endpoint
-        fetch('http://localhost:3000/api/getStravaTokenWithRefreshToken', {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                localStorage.setItem("strava_access_token", data.access_token);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    }
+    }, [activities, detailedActivities, accessToken])
 
     return (
         <>
@@ -136,8 +151,7 @@ export default function Activity() {
                         </Col>
                     </Row>
                 }
-                {detailedActivities.map((a, i) => {
-                    console.log(a.photos.primary.urls[0])
+                {detailedActivities.length && detailedActivities.map((a, i) => {
                     return (
                         <div key={`activity-${i}`} className={"card-container"}>
                             <Card style={{width: '18rem'}}>
