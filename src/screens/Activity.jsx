@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Activity() {
-    // const [athlete, setAthlete] = useState();
-    // const getAthleteUrl = "https://www.strava.com/api/v3/athlete";
     const getActivitiesUrl = "https://www.strava.com/api/v3/athlete/activities";
     const getActivityUrl = "https://www.strava.com/api/v3/activities";
     const [activities, setActivities] = useState([]);
@@ -18,6 +16,7 @@ export default function Activity() {
     const currentTime = new Date().getTime() / 1000;
     const queryParams = new URLSearchParams(location.search);
     const authCode = queryParams.get('code');
+    const [isAccessTokenReady, setIsAccessTokenReady] = useState(false);
 
     useEffect(() => {
         fetch('https://www.blakemccracken.com/api/getAccessTokenFromSecretsManager')
@@ -25,6 +24,7 @@ export default function Activity() {
             .then(data => {
                 setAccessToken(data.accessToken);
                 setExpiresAt(data.expiresAt);
+                setIsAccessTokenReady(true);
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -32,14 +32,12 @@ export default function Activity() {
     }, []);
 
     useEffect(() => {
-        if ((!accessToken || accessToken === 'undefined') && !authCode) {
-            // testing with activity:read_all scope. Remove the _all when done testing private activities
-            // update redirect_uri with prod domain when deployed
+        if (isAccessTokenReady && !accessToken && !authCode) {
             window.location.href = `https://www.strava.com/oauth/authorize?client_id=${import.meta.env.VITE_STRAVA_CLIENT_ID}&redirect_uri=https://www.blakemccracken.com/activity&response_type=code&scope=read,activity:read`
             return;
         }
 
-        if (authCode) {
+        if (isAccessTokenReady && !accessToken && authCode) {
             fetch('https://www.blakemccracken.com/api/getStravaTokenWithAuthCode', {
                 method: "POST",
                 headers: {
@@ -60,7 +58,7 @@ export default function Activity() {
             return;
         }
 
-        if (expiresAt < currentTime) {
+        if (isAccessTokenReady && expiresAt < currentTime) {
             fetch('https://www.blakemccracken.com/api/getStravaTokenWithRefreshToken', {
                 method: "POST",
                 headers: {
@@ -69,32 +67,14 @@ export default function Activity() {
             })
                 .then(res => res.json())
                 .then(data => {
-                    localStorage.setItem("strava_access_token", data.access_token);
+                    setAccessToken(data.accessToken);
+                    setExpiresAt(data.expiresAt);
                 })
                 .catch(error => {
                     console.error('Error:', error);
                 });
         }
-    }, [authCode, accessToken, expiresAt, currentTime]);
-
-    // useEffect(() => {
-    //     if (accessToken) {
-    //         fetch(getAthleteUrl, {
-    //             method: "GET",
-    //             headers: {
-    //                 "Authorization": `Bearer ${accessToken}`
-    //             }
-    //         })
-    //             .then(res => {
-    //                 if (res.status === 200) {
-    //                     return res.json();
-    //                 }
-    //                 throw new Error("There was an error fetching athlete");
-    //             })
-    //             .then(data => setAthlete(data))
-    //             .catch(e => console.error(e))
-    //     }
-    // }, [accessToken])
+    }, [authCode, accessToken, expiresAt, currentTime, isAccessTokenReady]);
 
     useEffect(() => {
         if (accessToken) {

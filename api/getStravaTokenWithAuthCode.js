@@ -28,9 +28,14 @@ async function handler(request, response) {
     })
         .then(res => res.json())
         .then(data => {
+            console.log("getStravaTokenWithAuthCode: " + JSON.stringify(data));
             secretsManager.updateSecret({
                 SecretId: secretName,
-                SecretString: JSON.stringify({refreshToken: data.refresh_token}),
+                SecretString: JSON.stringify({
+                    refreshToken: data.refresh_token,
+                    accessToken: data.access_token,
+                    expiresAt: data.expires_at
+                }),
             }, (err, data) => {
                 if (err) {
                     console.error("Error updating secret:", err);
@@ -38,27 +43,6 @@ async function handler(request, response) {
                     console.log("Secret updated successfully:", data);
                 }
             });
-            secretsManager.updateSecret({
-                SecretId: secretName,
-                SecretString: JSON.stringify({accessToken: data.access_token}),
-            }, (err, data) => {
-                if (err) {
-                    console.error("Error updating secret:", err);
-                } else {
-                    console.log("Secret updated successfully:", data);
-                }
-            });
-            secretsManager.updateSecret({
-                SecretId: secretName,
-                SecretString: JSON.stringify({expiresAt: data.expire_at}),
-            }, (err, data) => {
-                if (err) {
-                    console.error("Error updating secret:", err);
-                } else {
-                    console.log("Secret updated successfully:", data);
-                }
-            });
-
             return response.status(200).json("Strava secrets updated successfully")
         })
         .catch(error => {
