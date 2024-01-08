@@ -23,12 +23,12 @@ export default function Activity() {
         if ((!accessToken || accessToken === 'undefined') && !authCode) {
             // testing with activity:read_all scope. Remove the _all when done testing private activities
             // update redirect_uri with prod domain when deployed
-            window.location.href = `https://www.strava.com/oauth/authorize?client_id=${import.meta.env.VITE_STRAVA_CLIENT_ID}&redirect_uri=https://blakemccracken.com/activity&response_type=code&scope=read,activity:read_all`
+            window.location.href = `https://www.strava.com/oauth/authorize?client_id=${import.meta.env.VITE_STRAVA_CLIENT_ID}&redirect_uri=https://www.blakemccracken.com/activity&response_type=code&scope=read,activity:read_all`
             return;
         }
 
         if (authCode) {
-            fetch('https://blakemccracken.com/api/getStravaTokenWithAuthCode', {
+            fetch('https://www.blakemccracken.com/api/getStravaTokenWithAuthCode', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -49,7 +49,7 @@ export default function Activity() {
         }
 
         if (expiresAt < currentTime) {
-            fetch('https://blakemccracken.com/api/getStravaTokenWithRefreshToken', {
+            fetch('https://www.blakemccracken.com/api/getStravaTokenWithRefreshToken', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
