@@ -13,17 +13,29 @@ export default function Activity() {
     const [activities, setActivities] = useState([]);
     const [detailedActivities, setDetailedActivities] = useState([]);
     const location = useLocation();
-    const accessToken = localStorage.getItem("strava_access_token");
-    const expiresAt = localStorage.getItem("strava_expires_at");
+    const [accessToken, setAccessToken] = useState();
+    const [expiresAt, setExpiresAt] = useState();
     const currentTime = new Date().getTime() / 1000;
     const queryParams = new URLSearchParams(location.search);
     const authCode = queryParams.get('code');
 
     useEffect(() => {
+        fetch('https://www.blakemccracken.com/api/getAccessTokenFromSecretsManager')
+            .then(res => res.json())
+            .then(data => {
+                setAccessToken(data.accessToken);
+                setExpiresAt(data.expiresAt);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }, []);
+
+    useEffect(() => {
         if ((!accessToken || accessToken === 'undefined') && !authCode) {
             // testing with activity:read_all scope. Remove the _all when done testing private activities
             // update redirect_uri with prod domain when deployed
-            window.location.href = `https://www.strava.com/oauth/authorize?client_id=${import.meta.env.VITE_STRAVA_CLIENT_ID}&redirect_uri=https://www.blakemccracken.com/activity&response_type=code&scope=read,activity:read_all`
+            window.location.href = `https://www.strava.com/oauth/authorize?client_id=${import.meta.env.VITE_STRAVA_CLIENT_ID}&redirect_uri=https://www.blakemccracken.com/activity&response_type=code&scope=read,activity:read`
             return;
         }
 
@@ -39,8 +51,8 @@ export default function Activity() {
             })
                 .then(res => res.json())
                 .then(data => {
-                    localStorage.setItem("strava_access_token", data.accessToken);
-                    localStorage.setItem("strava_expires_at", data.expiresAt);
+                    setAccessToken(data.accessToken);
+                    setExpiresAt(data.expiresAt);
                 })
                 .catch(error => {
                     console.error('Error:', error);

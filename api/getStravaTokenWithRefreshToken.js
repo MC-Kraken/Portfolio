@@ -14,7 +14,7 @@ async function handler(request, response) {
         region: "us-west-2"
     });
     const secretsManager = new AWS.SecretsManager();
-    const secretName = "STRAVA_REFRESH_TOKEN";
+    const secretName = "STRAVA_AUTH";
 
     secretsManager.getSecretValue({SecretId: secretName}, (err, data) => {
         if (err) {
@@ -22,7 +22,7 @@ async function handler(request, response) {
         } else {
             // Parse and use the secret value
             const secret = JSON.parse(data.SecretString);
-            refreshToken = secret.value;
+            refreshToken = secret.refreshToken;
         }
     });
 
@@ -44,17 +44,36 @@ async function handler(request, response) {
         .then(data => {
             secretsManager.updateSecret({
                 SecretId: secretName,
-                SecretString: JSON.stringify({value: data.refresh_token}),
+                SecretString: JSON.stringify({refreshToken: data.refresh_token}),
             }, (err, data) => {
                 if (err) {
-                    console.error('Error updating secret:', err);
+                    console.error("Error updating secret:", err);
                 } else {
-                    console.log('Secret updated successfully:', data);
+                    console.log("Secret updated successfully:", data);
                 }
             });
-            return response.status(200).json({
-                accessToken: data.access_token
-            })
+            secretsManager.updateSecret({
+                SecretId: secretName,
+                SecretString: JSON.stringify({accessToken: data.access_token}),
+            }, (err, data) => {
+                if (err) {
+                    console.error("Error updating secret:", err);
+                } else {
+                    console.log("Secret updated successfully:", data);
+                }
+            });
+            secretsManager.updateSecret({
+                SecretId: secretName,
+                SecretString: JSON.stringify({expiresAt: data.expire_at}),
+            }, (err, data) => {
+                if (err) {
+                    console.error("Error updating secret:", err);
+                } else {
+                    console.log("Secret updated successfully:", data);
+                }
+            });
+
+            return response.status(200).json("Strava secrets updated successfully")
         })
         .catch(error => {
             console.error('Error:', error);
