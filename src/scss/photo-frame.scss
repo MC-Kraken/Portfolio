@@ -1,0 +1,250 @@
+// Pure CSS Picture Frame
+
+// Color Variables
+$bg__color--wrapper-bg: #536dfe;
+$bg__color--wrapper-bg-light: mix(#536dfe, #fff, 25%);
+$bg__color--wrapper-bg-light-2: mix(#536dfe, #fff, 55%);
+$bg__color--picture-bg: #eceff1;
+
+// Color Variables
+$bg__color--frame-0: #212121;
+$bg__color--frame-1: mix(#212121, $bg__color--wrapper-bg-light-2, 100%);
+$bg__color--frame-2: mix(#212121, $bg__color--wrapper-bg-light, 99%);
+$bg__color--frame-3: mix(#212121, $bg__color--wrapper-bg-light-2, 98%);
+$bg__color--frame-4: mix(#212121, $bg__color--wrapper-bg-light, 97%);
+$bg__color--frame-5: mix(#212121, $bg__color--wrapper-bg-light-2, 96%);
+$bg__color--frame-6: mix(#212121, $bg__color--wrapper-bg, 95%);
+$bg__color--frame-7: mix(#212121, $bg__color--wrapper-bg-light-2, 94%);
+$bg__color--frame-8: mix(#212121, $bg__color--wrapper-bg-light, 93%);
+$bg__color--frame-9: mix(#212121, $bg__color--wrapper-bg-light-2, 92%);
+$bg__color--frame-10: mix(#212121, $bg__color--wrapper-bg-light, 91%);
+$bg__color--frame-11: mix(#212121, $bg__color--wrapper-bg-light-2, 90%);
+$bg__color--frame-12: mix(#212121, $bg__color--wrapper-bg-light, 89%);
+$bg__color--frame-13: mix(#212121, $bg__color--wrapper-bg-light-2, 88%);
+$bg__color--frame-14: mix(#212121, $bg__color--wrapper-bg-light, 87%);
+$bg__color--frame-15: mix(#212121, $bg__color--wrapper-bg-light-2, 86%);
+$bg__color--frame-16: mix(#212121, $bg__color--wrapper-bg-light, 85%);
+$bg__color--frame-17: mix(#212121, $bg__color--wrapper-bg-light-2, 84%);
+$bg__color--frame-18: mix(#212121, $bg__color--wrapper-bg-light, 83%);
+$bg__color--frame-19: mix(#212121, $bg__color--wrapper-bg-light-2, 82%);
+$bg__color--frame-20: mix(#212121, $bg__color--wrapper-bg-light, 81%);
+$bg__color--frame-21: mix(#212121, $bg__color--wrapper-bg-light-2, 80%);
+$bg__color--frame-22: mix(#212121, $bg__color--wrapper-bg-light, 79%);
+$bg__color--frame-23: mix(#212121, $bg__color--wrapper-bg-light-2, 78%);
+$bg__color--frame-24: mix(#212121, $bg__color--wrapper-bg-light, 77%);
+$bg__color--frame-25: mix(#212121, $bg__color--wrapper-bg-light-2, 76%);
+$bg__color--frame-26: mix(#212121, $bg__color--wrapper-bg-light, 77%);
+$bg__color--frame-27: mix(#212121, $bg__color--wrapper-bg-light-2, 78%);
+$bg__color--frame-28: mix(#212121, $bg__color--wrapper-bg-light, 79%);
+$bg__color--frame-29: mix(#212121, $bg__color--wrapper-bg-light-2, 80%);
+$bg__color--frame-30: mix(#212121, $bg__color--wrapper-bg-light, 81%);
+$bg__color--frame-31: mix(#212121, $bg__color--wrapper-bg-light-2, 82%);
+$bg__color--frame-32: mix(#212121, $bg__color--wrapper-bg-light, 83%);
+
+// Layout Wrapper
+.bg__layout-wrapper {
+  width: 100%;
+  height: 340px;
+}
+
+// Picture
+.bg__picture {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+// Picture Wrapper
+.bg__picture-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: 16px + 32px;
+  padding-bottom: 16px + 32px;
+  padding-left: 16px + 36px;
+  padding-right: 16px + 36px;
+  overflow: hidden;
+  position: relative;
+}
+
+// Frame Inner Shadow
+.bg__frame-inner-shadow-outer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  z-index: 9;
+  position: absolute;
+}
+
+// Frame Inner Shadow
+.bg__frame-inner-shadow {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 6px 8px 16px -8px mix($bg__color--wrapper-bg, #000, .4);
+  -moz-box-shadow: inset 68px 8px 16px -8px mix($bg__color--wrapper-bg, #000, .4);
+  box-shadow: inset 6px 8px 16px -8px mix($bg__color--wrapper-bg, #000, .4);
+  opacity: .6;
+}
+
+// Frame Inner Shadow
+.bg__frame-inner-shine-outer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  z-index: 9;
+  position: absolute;
+}
+
+// Frame Inner Shine
+.bg__frame-inner-shine {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset -48px -8px 58px -14px rgba($bg__color--frame-0, 1);
+  -moz-box-shadow: inset -4px -8px 58px -14px rgba($bg__color--frame-0, 1);
+  box-shadow: inset -4px -8px 58px -14px rgba($bg__color--frame-0, 1);
+  opacity: .4;
+}
+
+// Frame Inner Shadow
+.bg__frame-inner-photo-shadow-outer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 16px + 32px;
+  padding-bottom: 16px + 32px;
+  padding-left: 16px + 36px;
+  padding-right: 16px + 36px;
+  z-index: 9;
+  position: absolute;
+}
+
+// Frame Inner Shine
+.bg__frame-inner-photo-shadow {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset -2px 1px 12px -1px rgba($bg__color--frame-0, 1);
+  -moz-box-shadow: inset -2px -1px 12px -1px rgba($bg__color--frame-0, 1);
+  box-shadow: inset -2px -1px 12px -1px rgba($bg__color--frame-0, 1);
+  opacity: .2;
+}
+
+// Picture Frame
+.bg__frame {
+  background-color: $bg__color--picture-bg;
+  height: 340px;
+  width: fit-content;
+  margin: -170px -270px;
+  position: absolute;
+  left: 50%;
+  transform: translate(42%);
+  top: 375px;
+  border: 1px solid;
+  border-color: rgba($bg__color--frame-0, .9) rgba($bg__color--frame-1, .9);
+  box-shadow: // Frame Section
+          3px 6px 10px -2px hsla(0, 0%, 0%, .3),
+            // Frame Section
+          inset 0 1px 0 $bg__color--frame-1,
+          inset 1px 0 0 $bg__color--frame-2,
+          inset 0 -1px 0 $bg__color--frame-1,
+          inset -1px 0 0 $bg__color--frame-2,
+            // Frame Section
+          inset 0 2px 0 $bg__color--frame-3,
+          inset 2px 0 0 $bg__color--frame-4,
+          inset 0 -2px 0 $bg__color--frame-3,
+          inset -2px 0 0 $bg__color--frame-4,
+            // Frame Section
+          inset 0 3px 0 $bg__color--frame-5,
+          inset 3px 0 0 $bg__color--frame-6,
+          inset 0 -3px 0 $bg__color--frame-5,
+          inset -3px 0 0 $bg__color--frame-6,
+            // Frame Section
+          inset 0 4px 0 $bg__color--frame-7,
+          inset 4px 0 0 $bg__color--frame-8,
+          inset 0 -4px 0 $bg__color--frame-7,
+          inset -4px 0 0 $bg__color--frame-8,
+            // Frame Section
+          inset 0 5px 0 $bg__color--frame-9,
+          inset 5px 0 0 $bg__color--frame-10,
+          inset 0 -5px 0 $bg__color--frame-9,
+          inset -5px 0 0 $bg__color--frame-10,
+            // Frame Section
+          inset 0 6px 0 $bg__color--frame-11,
+          inset 6px 0 0 $bg__color--frame-12,
+          inset 0 -6px 0 $bg__color--frame-11,
+          inset -6px 0 0 $bg__color--frame-12,
+            // Frame Section
+          inset 0 7px 0 $bg__color--frame-13,
+          inset 7px 0 0 $bg__color--frame-14,
+          inset 0 -7px 0 $bg__color--frame-13,
+          inset -7px 0 0 $bg__color--frame-14,
+            // Frame Section
+          inset 0 8px 0 $bg__color--frame-15,
+          inset 8px 0 0 $bg__color--frame-16,
+          inset 0 -8px 0 $bg__color--frame-15,
+          inset -8px 0 0 $bg__color--frame-16,
+            // Frame Section
+          inset 0 9px 0 $bg__color--frame-17,
+          inset 9px 0 0 $bg__color--frame-18,
+          inset 0 -9px 0 $bg__color--frame-17,
+          inset -9px 0 0 $bg__color--frame-18,
+            // Frame Section
+          inset 0 10px 0 $bg__color--frame-19,
+          inset 10px 0 0 $bg__color--frame-20,
+          inset 0 -10px 0 $bg__color--frame-19,
+          inset -10px 0 0 $bg__color--frame-20,
+            // Frame Section
+          inset 0 11px 0 $bg__color--frame-21,
+          inset 11px 0 0 $bg__color--frame-22,
+          inset 0 -11px 0 $bg__color--frame-21,
+          inset -11px 0 0 $bg__color--frame-22,
+            // Frame Section
+          inset 0 12px 0 $bg__color--frame-23,
+          inset 12px 0 0 $bg__color--frame-24,
+          inset 0 -12px 0 $bg__color--frame-23,
+          inset -12px 0 0 $bg__color--frame-24,
+            // Frame Section
+          inset 0 13px 0 $bg__color--frame-25,
+          inset 13px 0 0 $bg__color--frame-26,
+          inset 0 -13px 0 $bg__color--frame-25,
+          inset -13px 0 0 $bg__color--frame-26,
+            // Frame Section
+          inset 0 14px 0 $bg__color--frame-27,
+          inset 14px 0 0 $bg__color--frame-28,
+          inset 0 -14px 0 $bg__color--frame-27,
+          inset -14px 0 0 $bg__color--frame-28,
+            // Frame Section
+          inset 0 15px 0 $bg__color--frame-29,
+          inset 15px 0 0 $bg__color--frame-30,
+          inset 0 -15px 0 $bg__color--frame-29,
+          inset -15px 0 0 $bg__color--frame-30,
+            // Frame Section
+          inset 0 16px 0 $bg__color--frame-31,
+          inset 16px 0 0 $bg__color--frame-32,
+          inset 0 -16px 0 $bg__color--frame-31,
+          inset -16px 0 0 $bg__color--frame-32,
+}
+
+///* Mobile devices */
+//@media only screen and (max-width: 767px) {
+//  .bg__frame {
+//    top: 380px;
+//  }
+//}
+//
+///* Tablet devices */
+//@media only screen and (min-width: 768px) and (max-width: 1024px) {
+//  .bg__frame {
+//    top: 590px;
+//  }
+//}
+
