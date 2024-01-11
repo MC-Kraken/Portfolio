@@ -16,15 +16,15 @@ async function handler(request, response) {
     const secretsManager = new AWS.SecretsManager();
     const secretName = "STRAVA_AUTH";
 
-    secretsManager.getSecretValue({SecretId: secretName}, (err, data) => {
-        if (err) {
-            console.error('Error retrieving secret:', err);
-        } else {
-            // Parse and use the secret value
-            const secret = JSON.parse(data.SecretString);
-            refreshToken = secret.refreshToken;
-        }
-    });
+    try {
+        const data = await secretsManager.getSecretValue({ SecretId: secretName }).promise();
+        console.log("getAccessTokenFromRefreshToken: " + JSON.stringify(data));
+        const secret = JSON.parse(data.SecretString);
+        refreshToken = secret.refreshToken;
+    } catch (err) {
+        console.error('Error retrieving secret:', err);
+        return response.status(400).json("There was an error fetching secrets");
+    }
 
     fetch(tokenExchangeUrl, {
         method: "POST",
