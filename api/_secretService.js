@@ -12,7 +12,7 @@ const secretsManager = new AWS.SecretsManager();
 const secretName = "STRAVA_AUTH";
 
 export class SecretService {
-    async getSecret(secretName) {
+    async getSecret() {
         try {
             return await secretsManager
               .getSecretValue({ SecretId: secretName })
