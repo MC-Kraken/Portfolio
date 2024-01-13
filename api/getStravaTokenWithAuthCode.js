@@ -20,7 +20,7 @@ async function handler(request, response) {
     .then((res) => res.json())
     .then((data) => {
       console.log("getStravaTokenWithAuthCode: " + JSON.stringify(data));
-      secretService.getSecret();
+      secretService.updateSecret(data);
       return response
         .status(200)
         .json({ accessToken: data.access_token, expiresAt: data.expires_at });
