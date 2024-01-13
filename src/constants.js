@@ -5,5 +5,6 @@ export const constants = {
         contact: "contact",
         projects: "projects",
         activity: "activity"
-    }
+    },
+    awsRegion: "us-west-2"
 }
