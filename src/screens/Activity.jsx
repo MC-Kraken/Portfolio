@@ -1,8 +1,8 @@
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row, Spinner } from "react-bootstrap";
 import { constants } from "../constants.js";
 import { Navigation } from "../components/Navigation.jsx";
 import Footer from "../components/Footer.jsx";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Activity() {
@@ -17,8 +17,10 @@ export default function Activity() {
   const queryParams = new URLSearchParams(location.search);
   const authCode = queryParams.get("code");
   const [isAccessTokenReady, setIsAccessTokenReady] = useState(false);
+  const isLoading = useRef(true);
   // useState should only be used for rendering purposes
   // TODO: use a useRef to keep track of access token (and anything else) because it isn't used for rendering
+  // TODO: test out useQuery for keeping up with strava auth info/caching to prevent fetching every page load
 
   // Fetch secrets
   useEffect(() => {
@@ -116,9 +118,10 @@ export default function Activity() {
           },
         })
           .then((res) => res.json())
-          .then((activity) =>
-            setDetailedActivities([...detailedActivities, activity]),
-          )
+          .then((activity) => {
+            setDetailedActivities([...detailedActivities, activity]);
+            isLoading.current = false;
+          })
           .catch((error) => {
             console.error("Error:", error);
           });
@@ -137,12 +140,6 @@ export default function Activity() {
         </Row>
       </Container>
       <Container>
-        <Row className="text-center">
-          <Col>This page is under construction 🚧</Col>
-        </Row>
-        <Row className="text-center">
-          <Col>Check back soon!</Col>
-        </Row>
         {/*{athlete &&*/}
         {/*    <Row className="text-center">*/}
         {/*        <Col>*/}
@@ -150,6 +147,20 @@ export default function Activity() {
         {/*        </Col>*/}
         {/*    </Row>*/}
         {/*}*/}
+        {isLoading.current && (
+          <>
+            <Row>
+              <Col className={"d-flex justify-content-center"}>
+                <Spinner />
+              </Col>
+            </Row>
+            <Row>
+              <Col className={"d-flex justify-content-center"}>
+                <p>Fetching activities from the Strava API...</p>
+              </Col>
+            </Row>
+          </>
+        )}
         {detailedActivities.length > 0 &&
           detailedActivities.map((activity, i) => {
             return (

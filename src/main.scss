@@ -2,7 +2,7 @@
 @import "./scss/photo-frame.scss";
 
 body {
-  background-image: url('/bg-img.jpeg');
+  background-image: url("/bg-img.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,12 +25,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 75px;
   color: black;
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }
 
 h1 {
@@ -54,10 +55,11 @@ h1 {
 
 .socials {
   color: black;
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 
   i {
     font-size: 2em;
@@ -66,10 +68,11 @@ h1 {
 
 .socials:hover {
   color: black;
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }
 
 //////////LANDING PAGE//////////
@@ -116,7 +119,7 @@ h1 {
   .navbar-collapse {
     position: absolute;
     top: 45px;
-    left: 20px
+    left: 20px;
   }
 }
 
@@ -124,7 +127,7 @@ h1 {
   .navbar-collapse {
     position: absolute;
     right: 13px;
-    top: 7px
+    top: 7px;
   }
 }
 
@@ -142,10 +145,11 @@ h1 {
 }
 
 .navbar-brand {
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
   color: black;
 }
 
@@ -154,12 +158,13 @@ h1 {
 }
 
 .brand-subtext {
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
   color: black;
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 500;
 }
 
@@ -170,27 +175,30 @@ h1 {
 }
 
 .nav-link {
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
   color: black;
 }
 
 .nav-link:hover {
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
   color: black;
 }
 
 .current {
   color: black;
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 1.25em;
@@ -198,7 +206,7 @@ h1 {
 
 //////////RESUME//////////
 .resume {
-  height: 300px;
+  height: 310px;
   display: flex;
   justify-content: center;
 
@@ -260,7 +268,7 @@ select:-webkit-autofill:focus {
 
 .portrait {
   height: 225px;
-  background-image: url('/portrait.jpeg');
+  background-image: url("/portrait.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -279,29 +287,32 @@ select:-webkit-autofill:focus {
 .about-text {
   padding: 0 40px;
   font-size: 3vw;
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }
 
 @media screen and (min-width: 1280px) {
   .about-text {
     font-size: 1.25vw;
-    text-shadow: -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white;
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1279px) {
   .about-text {
     font-size: 1.5vw;
-    text-shadow: -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white;
   }
 }
 
@@ -317,7 +328,9 @@ select:-webkit-autofill:focus {
 
 .card {
   height: 392px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition for hover effect */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* smooth transition for hover effect */
 
   /* Traditional box shadow */
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); /* shadow offset to the right and bottom */
@@ -331,10 +344,11 @@ select:-webkit-autofill:focus {
 
 .carousel-indicators > button {
   background-color: black !important;
-  text-shadow: -1px -1px 0 white,
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
 }
 
 .card-container {
@@ -344,11 +358,15 @@ select:-webkit-autofill:focus {
   padding-top: 3px;
 
   .card-body {
-    border-bottom-right-radius: var(--bs-border-radius);;
-    border-bottom-left-radius: var(--bs-border-radius);;
+    border-bottom-right-radius: var(--bs-border-radius);
+    border-bottom-left-radius: var(--bs-border-radius);
+  }
+
+  .card-text {
+    max-height: 100px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* Number of lines you want */
+    overflow: hidden;
   }
 }
-
-
-
-
