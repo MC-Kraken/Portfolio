@@ -1,10 +1,9 @@
 import fetch from "node-fetch";
 import allowCors from "./_allowCors.js";
-import { SecretService } from "./_secretService.js";
+import secretService from "./_secretService.js";
 
 async function handler(request, response) {
   const tokenExchangeUrl = "https://www.strava.com/api/v3/oauth/token";
-  const secretService = new SecretService();
 
   fetch(tokenExchangeUrl, {
     method: "POST",
@@ -26,7 +25,7 @@ async function handler(request, response) {
         .json({ accessToken: data.access_token, expiresAt: data.expires_at });
     })
     .catch((error) => {
-      console.error("Error:", error);
+      console.error(error);
     });
 }
 

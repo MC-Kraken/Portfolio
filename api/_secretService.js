@@ -45,3 +45,6 @@ export class SecretService {
         );
     }
 }
+
+const secretService = new SecretService();
+export default secretService;

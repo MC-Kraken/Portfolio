@@ -1,10 +1,9 @@
 import allowCors from "./_allowCors.js";
-import { SecretService } from "./_secretService.js";
+import secretService from "./_secretService.js";
 
 async function handler(request, response) {
   let accessToken = null;
   let expiresAt = null;
-  const secretService = new SecretService();
 
   try {
     const data = await secretService.getSecret();
