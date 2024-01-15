@@ -97,10 +97,7 @@ h1 {
 .navbar {
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.nav-link {
-  padding: 3px;
+  --bs-navbar-toggler-icon-bg: url("/hamburger-menu.svg");
 }
 
 .nav-link:hover {
@@ -115,24 +112,14 @@ h1 {
   box-shadow: none;
 }
 
-@media screen and (max-width: 767px) {
-  .navbar-collapse {
-    position: absolute;
-    top: 45px;
-    left: 20px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .navbar-collapse {
-    position: absolute;
-    right: 13px;
-    top: 7px;
-  }
-}
-
 .navbar-toggler {
   margin-left: auto;
+  padding-right: 0;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  z-index: 2000;
 }
 
 .navbar-collapse.collapse {
@@ -151,6 +138,7 @@ h1 {
     -1px 1px 0 white,
     1px 1px 0 white;
   color: black;
+  z-index: 2000;
 }
 
 .navbar-brand:hover {
@@ -168,12 +156,6 @@ h1 {
   font-weight: 500;
 }
 
-@media screen and (max-width: 450px) {
-  .brand-subtext {
-    display: none;
-  }
-}
-
 .nav-link {
   text-shadow:
     -1px -1px 0 white,
@@ -181,6 +163,7 @@ h1 {
     -1px 1px 0 white,
     1px 1px 0 white;
   color: black;
+  padding: 3px;
 }
 
 .nav-link:hover {
@@ -202,6 +185,44 @@ h1 {
   text-transform: uppercase;
   text-decoration: underline;
   font-size: 1.25em;
+}
+
+@media screen and (max-width: 450px) {
+  .brand-subtext {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-collapse {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .navbar-nav {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 10px;
+  }
+
+  .nav-link {
+    text-shadow: none;
+    color: white;
+  }
+
+  .nav-link:hover {
+    text-shadow: none;
+    color: white;
+  }
 }
 
 //////////RESUME//////////
