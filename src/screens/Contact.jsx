@@ -18,7 +18,7 @@ export const Contact = () => {
                 window.location.href = "/thank-you";
             })
             .catch(error => {
-                console.error("Error:", error);
+                console.error(error);
                 alert("An error occurred. Please try again later.");
             });
     };
