@@ -1,4 +1,4 @@
-.frame {
+.resume-frame {
   height: auto;
   position: absolute;
   top: 200px;
@@ -18,3 +18,45 @@
   margin: 0 auto;
 }
 
+.portrait-frame {
+  height: auto;
+  position: relative;
+  left: -55px;
+  right: 0;
+  width: 200px;
+  background: #fff;
+  padding: 30px;
+  border-style: solid;
+  border-width: 15px;
+  border-top-color: #333333;
+  border-right-color: black;
+  border-bottom-color: #333333;
+  border-left-color: black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .portrait-frame {
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background: #fff;
+    padding: 30px;
+    border-style: solid;
+    border-width: 15px;
+    border-top-color: #333333;
+    border-right-color: black;
+    border-bottom-color: #333333;
+    border-left-color: black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .portrait-frame {
+    display: none;
+  }
+}

@@ -16,7 +16,7 @@ export const Resume = () => {
       </Container>
       <Container>
         <Row className="resume">
-          <img className="frame" src="/resume.png" alt="" />
+          <img className="resume-frame" src="/resume.png" alt="" />
         </Row>
         {/*<div className="bg__layout-wrapper">*/}
         {/*    <div className="bg__frame">*/}

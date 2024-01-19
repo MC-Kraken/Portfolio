@@ -17,6 +17,11 @@ body {
   max-width: 100vw;
 }
 
+#typewriter {
+  margin-top: 10vh;
+  margin-bottom: 25px;
+}
+
 .row {
   max-width: 100vw;
 }
@@ -73,23 +78,6 @@ h1 {
     1px -1px 0 white,
     -1px 1px 0 white,
     1px 1px 0 white;
-}
-
-//////////LANDING PAGE//////////
-
-#landing {
-  margin-top: 100px;
-  flex-direction: column;
-  max-width: 100vw;
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
-
-.fade-in.visible {
-  opacity: 1;
 }
 
 //////////NAVBAR//////////
@@ -301,39 +289,43 @@ select:-webkit-autofill:focus {
 }
 
 .about {
-  height: 32vh;
+  max-height: 0;
   max-width: 100vw;
 }
 
+@media screen and (max-width: 992px) {
+  .about {
+    gap: 20px;
+  }
+}
+
 .about-text {
-  padding: 0 40px;
+  max-width: 60%;
+  margin: 0 40px;
+  padding: 15px;
   font-size: 3vw;
-  text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
+  border-radius: var(--bs-border-radius);
 }
 
 @media screen and (min-width: 1280px) {
   .about-text {
+    margin: 0 40px;
+    border-radius: var(--bs-border-radius);
     font-size: 1.25vw;
-    text-shadow:
-      -1px -1px 0 white,
-      1px -1px 0 white,
-      -1px 1px 0 white,
-      1px 1px 0 white;
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1279px) {
   .about-text {
+    margin: 0 40px;
+    border-radius: var(--bs-border-radius);
     font-size: 1.5vw;
-    text-shadow:
-      -1px -1px 0 white,
-      1px -1px 0 white,
-      -1px 1px 0 white,
-      1px 1px 0 white;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-text {
+    max-width: 85%;
   }
 }
 
