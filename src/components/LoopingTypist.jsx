@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 export default function LoopingTypist({ startTyping }) {
   const words = useMemo(
-    () => [" software engineer", "n urbanist", " weight lifter"],
+    () => [" software engineer", "n urbanist", " weight lifter", " gamer"],
     [],
   );
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
