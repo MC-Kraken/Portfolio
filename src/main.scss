@@ -300,6 +300,7 @@ select:-webkit-autofill:focus {
 }
 
 .about-text {
+  opacity: 0.9;
   max-width: 60%;
   margin: 0 40px;
   padding: 15px;
@@ -311,7 +312,7 @@ select:-webkit-autofill:focus {
   .about-text {
     margin: 0 40px;
     border-radius: var(--bs-border-radius);
-    font-size: 1.25vw;
+    font-size: 20px;
   }
 }
 
