@@ -1,5 +1,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "./scss/photo-frame.scss";
+@import "./scss/photo-frame";
+@import "./scss/activity";
 
 body {
   background-image: url("/bg-img.jpeg");
@@ -342,6 +343,7 @@ select:-webkit-autofill:focus {
 
 .card {
   height: 392px;
+  border: none;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease; /* smooth transition for hover effect */

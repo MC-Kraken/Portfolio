@@ -1,10 +1,22 @@
-import { Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import {
+  Card,
+  Carousel,
+  CarouselItem,
+  Col,
+  Container,
+  Row,
+  Spinner,
+} from "react-bootstrap";
 import { constants } from "../constants.js";
 import { Navigation } from "../components/Navigation.jsx";
 import Footer from "../components/Footer.jsx";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import stravaService from "../../api/_stravaService.js";
+import "leaflet/dist/leaflet.css";
+import polyline from "@mapbox/polyline";
+import { MapContainer, Polyline, TileLayer } from "react-leaflet";
+import { SetViewToBounds } from "../components/SetViewToBounds.jsx";
 
 export default function Activity() {
   const [activities, setActivities] = useState([]);
@@ -17,6 +29,8 @@ export default function Activity() {
   const authCode = queryParams.get("code");
   const [isAccessTokenReady, setIsAccessTokenReady] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [polylines, setPolylines] = useState({});
+  const [activeIndex, setActiveIndex] = useState(0);
   const isAccessTokenExpired = expiresAt < currentTime;
   // TODO: test out useQuery for keeping up with strava auth info/caching to prevent fetching every page load
 
@@ -86,7 +100,14 @@ export default function Activity() {
         stravaService
           .getActivity(accessToken, id)
           .then((activity) => {
-            setDetailedActivities([...detailedActivities, activity]);
+            setDetailedActivities((currentDetailedActivities) => [
+              ...currentDetailedActivities,
+              activity,
+            ]);
+            setPolylines((prevState) => ({
+              ...prevState,
+              [id]: polyline.decode(activity.map.polyline),
+            }));
           })
           .catch((error) => {
             console.error(error);
@@ -106,7 +127,7 @@ export default function Activity() {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container className="activity">
         {isLoading && (
           <>
             <Row>
@@ -121,25 +142,50 @@ export default function Activity() {
             </Row>
           </>
         )}
-        {!isLoading &&
-          detailedActivities.length > 0 &&
-          detailedActivities.map((activity, i) => {
-            return (
-              <div key={`activity-${i}`} className={"card-container"}>
-                <Card style={{ width: "18rem" }}>
-                  <Card.Img
-                    className={"bg-dark text-white"}
-                    variant="top"
-                    src={activity.photos.primary.urls["600"]}
-                  />
-                  <Card.Body className={"bg-dark text-white"}>
-                    <Card.Title>{activity.name}</Card.Title>
-                    <Card.Text>{activity.description}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </div>
-            );
-          })}
+
+        {!isLoading && detailedActivities.length > 0 && (
+          <Carousel activeIndex={activeIndex} onSelect={eventKey => setActiveIndex(eventKey)}>
+            {detailedActivities.map((activity, i) => {
+              return (
+                <CarouselItem key={`carousel-item-${i}`}>
+                  <div key={`activity-${i}`} className={"card-container"}>
+                    <Card style={{ width: "18rem" }}>
+                      {!activity.map.polyline && (
+                        <Card.Img
+                          className={"bg-dark text-white"}
+                          variant="top"
+                          src={activity.photos.primary.urls["600"] ?? ""}
+                        />
+                      )}
+                      {activity.map.polyline && (
+                        <MapContainer
+                          center={[0, 0]}
+                          zoom={13}
+                          style={{ height: "214.5px", width: "100%" }}
+                          key={activeIndex}
+                        >
+                          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                          {polylines && (
+                            <Polyline
+                              positions={polylines[activity.id].map(
+                                ([lat, lng]) => [lat, lng],
+                              )}
+                            />
+                          )}
+                          <SetViewToBounds polyline={polylines[activity.id]} activeIndex={activeIndex} mapIndex={i} />
+                        </MapContainer>
+                      )}
+                      <Card.Body className={"bg-dark text-white"}>
+                        <Card.Title>{activity.name}</Card.Title>
+                        <Card.Text>{activity.description}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              );
+            })}
+          </Carousel>
+        )}
       </Container>
       <Footer />
     </>

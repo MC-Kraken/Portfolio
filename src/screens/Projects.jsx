@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Navigation } from "../components/Navigation.jsx";
 import { constants } from "../constants.js";
-import { CarouselComponent } from "../components/CarouselComponent.jsx";
+import { ProjectsCarousel } from "../components/ProjectsCarousel.jsx";
 import Footer from "../components/Footer.jsx";
 
 export const Projects = () => {
@@ -16,7 +16,7 @@ export const Projects = () => {
                 </Row>
             </Container>
             <Container className={"p-0"}>
-                <CarouselComponent />
+                <ProjectsCarousel />
             </Container>
             <Footer />
         </>
