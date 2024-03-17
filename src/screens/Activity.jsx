@@ -144,7 +144,10 @@ export default function Activity() {
         )}
 
         {!isLoading && detailedActivities.length > 0 && (
-          <Carousel activeIndex={activeIndex} onSelect={eventKey => setActiveIndex(eventKey)}>
+          <Carousel
+            activeIndex={activeIndex}
+            onSelect={(eventKey) => setActiveIndex(eventKey)}
+          >
             {detailedActivities.map((activity, i) => {
               return (
                 <CarouselItem key={`carousel-item-${i}`}>
@@ -164,7 +167,10 @@ export default function Activity() {
                           style={{ height: "214.5px", width: "100%" }}
                           key={activeIndex}
                         >
-                          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                          <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='<a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+                          />
                           {polylines && (
                             <Polyline
                               positions={polylines[activity.id].map(
@@ -172,7 +178,11 @@ export default function Activity() {
                               )}
                             />
                           )}
-                          <SetViewToBounds polyline={polylines[activity.id]} activeIndex={activeIndex} mapIndex={i} />
+                          <SetViewToBounds
+                            polyline={polylines[activity.id]}
+                            activeIndex={activeIndex}
+                            mapIndex={i}
+                          />
                         </MapContainer>
                       )}
                       <Card.Body className={"bg-dark text-white"}>
