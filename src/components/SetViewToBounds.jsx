@@ -7,7 +7,7 @@ export const SetViewToBounds = ({ polyline, activeIndex, mapIndex }) => {
 
   useEffect(() => {
     let timeoutId = null;
-    if (activeIndex === mapIndex) {
+    if (activeIndex === mapIndex || activeIndex === mapIndex - 1) {
       timeoutId = setTimeout(() => {
         map.invalidateSize();
         if (polyline && polyline.length > 0) {
