@@ -8,10 +8,8 @@ export default function PyxHealthCard() {
                 <Card.Body className={"bg-dark text-white"}>
                     <Card.Title>Pyx Health</Card.Title>
                     <Card.Text>
-                        At Pyx Health, I helped develop Thrive Pathway™, an eight-week program designed to help those
-                        experiencing persistent or chronic loneliness. <a
-                        href={"https://www.pyxhealth.com/how-it-works/#platform"} target={"_blank"} rel="noreferrer">How
-                        it works.</a>
+                        At <a href="https://hipyx.com/" target="_blank" rel="noreferrer">Pyx Health</a>, I helped develop Thrive Pathway™, an eight-week program designed to help those
+                        experiencing persistent or chronic loneliness.
                     </Card.Text>
                 </Card.Body>
             </Card>

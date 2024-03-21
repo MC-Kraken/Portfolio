@@ -8,6 +8,8 @@ export const WeddingDemoCard = () => {
                 <Card.Body className={"bg-dark text-white"}>
                     <Card.Title>Wedding Website</Card.Title>
                     <Card.Text>
+                        A static website built with HTML, CSS, and JS.
+                        <br/>
                         <a href={"https://mock-wedding-website.vercel.app/"} target={"_blank"} rel="noreferrer">See a demo</a>
                     </Card.Text>
                 </Card.Body>

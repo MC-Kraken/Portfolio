@@ -187,7 +187,7 @@ export default function Activity() {
                       )}
                       <Card.Body className={"bg-dark text-white"}>
                         <Card.Title>{activity.name}</Card.Title>
-                        <Card.Text>{activity.description}</Card.Text>
+                        <Card.Text className="activity-card-text">{activity.description}</Card.Text>
                       </Card.Body>
                     </Card>
                   </div>
