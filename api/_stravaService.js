@@ -71,14 +71,15 @@ class StravaService {
     })
       .then((res) => {
         if (res.status === 200) {
-          return res.json();
+          return res.json().filter((a) => a.type !== "WeightTraining");
         }
         throw new Error("There was an error fetching activities");
       })
       .then((data) => {
-        return {
-            activities: data.map((a) => a.id)
-        };
+          const filteredActivities = data.filter((a) => a.type !== "WeightTraining");
+          return {
+              activities: filteredActivities.map((a) => a.id),
+          };
       })
       .catch((error) => {
         console.error(error);
