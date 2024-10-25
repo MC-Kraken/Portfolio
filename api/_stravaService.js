@@ -71,7 +71,7 @@ class StravaService {
     })
       .then((res) => {
         if (res.status === 200) {
-          return res.json().filter((a) => a.type !== "WeightTraining");
+          return res.json();
         }
         throw new Error("There was an error fetching activities");
       })
